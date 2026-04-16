@@ -409,12 +409,15 @@ footer a:hover { color: var(--cream); }
 
 <script>
 const SHOWS = [
-  // Shows & channels will be added as we build out the directory.
-  // Each entry structure:
-  // { id:N, featured:bool, title:"", host:"", type:"video|audio|vidpod",
-  //   category:"cat-slug", catLabel:"Display Label",
-  //   trainer:"trainer-slug" (optional), emoji:"",
-  //   desc:"", youtube:"", spotify:"", apple:"", website:"", artwork:"" }
+  {
+    id:1, featured:true,
+    title:"Casey Deary",
+    host:"Casey Deary",
+    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
+    trainer:"deary", emoji:"🎬",
+    desc:"NRHA $6 Million Dollar Rider. 4x NRHA Open Futurity Champion (2012, 2015, 2021, 2025). NRHA Open Derby Champion 2025. 3x The American Performance Horseman Champion. National Reining Breeders Classic Champion 2020. Ranked #4 on NRHA Leading Lifetime Riders. A Run for a Million qualifier every year since its 2019 inception, featured on Taylor Sheridan's The Last Cowboy. Endless public footage across NRHA, RFAM, and Quarter Horse News coverage — Futurity runs, Derby wins, and signature horses including Americasnextgunmodel, Shesouttayourleague, Ten Thirty, Maverick, Down Right Amazing, and Belissimo.",
+    website:"https://dearyperformance.com"
+  },
 ];
 
 let activeType='all', activeCat='all', activeTrainer='all';
