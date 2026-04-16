@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>Reining Horse Videos — The Best Reining Video & Podcast Directory</title>
-<meta name="description" content="The ultimate reining horse media directory. Video channels, audio podcasts, and video podcasts covering the NRHA Futurity, NRHA Derby, The Run for a Million, 100X, European futurities and derbies, top trainers, and the reining lifestyle.">
-<meta property="og:title" content="Reining Horse Videos — Video & Podcast Directory">
-<meta property="og:description" content="The best reining horse video channels, podcasts, and video podcasts all in one place.">
+<title>Reining Horse Videos — The Best Reining Video Directory</title>
+<meta name="description" content="The ultimate reining horse video directory. Futurity runs, Derby championships, Run for a Million showdowns, 100X, European futurities, top trainers, and signature horses — all in one place.">
+<meta property="og:title" content="Reining Horse Videos — Video Directory">
+<meta property="og:description" content="The best reining horse videos all in one place. Futurity, Derby, Run for a Million, and top-trainer footage.">
 <meta property="og:url" content="https://www.reininghorsevideos.com">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://www.reininghorsevideos.com">
@@ -201,23 +201,20 @@ body {
 .card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; text-decoration: none; transition: var(--transition); border: 1px solid transparent; }
 .link-yt { background: #fff0f0; color: #c0392b; border-color: #f5c6c6; }
 .link-yt:hover { background: #ffe0e0; }
-.link-spotify { background: #f0faf3; color: #1a7d43; border-color: #b8e8c8; }
-.link-spotify:hover { background: #dcf5e5; }
-.link-apple { background: #fff0f5; color: #c0304b; border-color: #f5c0cc; }
-.link-apple:hover { background: #ffe0ea; }
+.link-fb { background: #eaf3ff; color: #1877F2; border-color: #c4d9f2; }
+.link-fb:hover { background: #d6e7fb; }
+.link-ig { background: #fdecf4; color: #c13584; border-color: #f2c3dc; }
+.link-ig:hover { background: #f9d7e7; }
 .link-web { background: var(--rope-pale); color: var(--leather-dark); border-color: var(--border); }
 .link-web:hover { background: var(--sand-dark); }
 
-/* TYPE & CAT BADGES */
-.type-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 2px 7px; border-radius: 4px; margin-right: 5px; }
-.type-video { background: #fff0ee; color: var(--rust); }
-.type-audio { background: var(--rope-pale); color: var(--leather-dark); }
-.type-vidpod { background: #e8eddf; color: #4a7239; }
+/* YEAR & CAT BADGES */
+.year-badge { display: inline-flex; align-items: center; font-size: 0.7rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; margin-right: 5px; background: var(--leather-deeper); color: var(--cream); letter-spacing: 0.3px; }
 .cat-badge { display: inline-flex; align-items: center; font-size: 0.62rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; background: var(--sand-dark); color: var(--ink-soft); }
 
 /* GRID */
-.podcast-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
-@media (max-width: 600px) { .podcast-grid { grid-template-columns: 1fr; } }
+.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
+@media (max-width: 600px) { .video-grid { grid-template-columns: 1fr; } }
 .pod-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); transition: all var(--transition); cursor: pointer; }
 .pod-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border-strong); }
 .pod-card-top { display: flex; gap: 10px; align-items: flex-start; }
@@ -287,7 +284,7 @@ footer a:hover { color: var(--cream); }
 <header class="topbar">
   <div>
     <div class="topbar-brand">Reining<span>Horse</span>Videos</div>
-    <div class="topbar-sub">Video &amp; Podcast Directory</div>
+    <div class="topbar-sub">Reining Horse Video Directory</div>
   </div>
   <div>
     <button class="submit-btn" onclick="openSubmit()">+ Submit</button>
@@ -296,8 +293,8 @@ footer a:hover { color: var(--cream); }
 
 <div class="hero">
   <div class="hero-site-title">Reining Horse Media Hub</div>
-  <h1>The Best Reining Horse <span>Videos &amp; Podcasts</span></h1>
-  <p>Video channels, audio podcasts, and video podcasts covering the NRHA Futurity, NRHA Derby, The Run for a Million, 100X, European futurities and derbies, top trainers, and the reining lifestyle.</p>
+  <h1>The Best Reining Horse <span>Videos</span></h1>
+  <p>Futurity runs, Derby championships, Run for a Million showdowns, 100X, European futurities, top trainers, and signature horses — all in one place.</p>
   <div id="heroBanner" onclick="window.open(bannerAds[currentBanner].url,'_blank')">
     <img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Sponsor" loading="lazy" width="320" height="100">
   </div>
@@ -311,8 +308,8 @@ footer a:hover { color: var(--cream); }
   setInterval(rotateBanner,5000);
   </script>
   <div class="hero-stats">
-    <div class="hero-stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Shows &amp; Channels</div></div>
-    <div class="hero-stat"><div class="stat-num">3</div><div class="stat-label">Media Types</div></div>
+    <div class="hero-stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Videos</div></div>
+    <div class="hero-stat"><div class="stat-num" id="stat-trainers">11</div><div class="stat-label">Featured Trainers</div></div>
     <div class="hero-stat"><div class="stat-num" id="stat-cats">12</div><div class="stat-label">Categories</div></div>
   </div>
 </div>
@@ -320,14 +317,12 @@ footer a:hover { color: var(--cream); }
 <div class="controls">
   <div class="search-wrap">
     <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" placeholder="Search shows, hosts, topics..." oninput="renderAll()" autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Search videos, trainers, horses, events..." oninput="renderAll()" autocomplete="off">
   </div>
-  <div class="chip-label">Media Type</div>
+  <div class="chip-label">Show Only</div>
   <div class="chip-row" id="typeChips">
-    <button class="chip active" data-type="all" onclick="setType(this,'all')">All Types</button>
-    <button class="chip" data-type="video" onclick="setType(this,'video')">🎬 Video</button>
-    <button class="chip" data-type="audio" onclick="setType(this,'audio')">🎙️ Audio Podcast</button>
-    <button class="chip" data-type="vidpod" onclick="setType(this,'vidpod')">📹 Video Podcast</button>
+    <button class="chip active" data-type="all" onclick="setType(this,'all')">All Videos</button>
+    <button class="chip" data-type="featured" onclick="setType(this,'featured')">⭐ Featured</button>
   </div>
   <div class="chip-label" style="margin-top:8px;">Category</div>
   <div class="chip-row" id="catChips">
@@ -367,7 +362,7 @@ footer a:hover { color: var(--cream); }
   <div id="featuredLabel" class="section-label">⭐ Featured</div>
   <div id="featuredGrid" class="featured-grid"></div>
   <div id="regularLabel" class="section-label">All Shows &amp; Channels</div>
-  <div id="podcastGrid" class="podcast-grid">
+  <div id="videoGrid" class="video-grid">
     <div id="noResults"><div class="no-icon">🤠</div><div>No results found. Try a different search.</div></div>
   </div>
 </main>
@@ -381,16 +376,15 @@ footer a:hover { color: var(--cream); }
 
 <div class="modal-overlay" id="submitModal" onclick="closeSubmit(event)">
   <div class="modal-box" onclick="event.stopPropagation()">
-    <div class="modal-title">Submit a Show or Channel</div>
+    <div class="modal-title">Submit a Video</div>
     <div class="modal-sub">Free listing — no pay-to-play, ever. Reviewed within 48 hours.</div>
-    <div class="form-row"><label>Show / Channel Name *</label><input type="text" id="f-name" placeholder="e.g. NRHA Ride the Pattern"></div>
-    <div class="form-row"><label>Host / Creator</label><input type="text" id="f-host" placeholder="Your name or channel name"></div>
-    <div class="form-row"><label>Media Type *</label><select id="f-type"><option value="">Select type...</option><option>🎬 Video Channel</option><option>🎙️ Audio Podcast</option><option>📹 Video Podcast</option></select></div>
+    <div class="form-row"><label>Video Title *</label><input type="text" id="f-name" placeholder="e.g. Casey Deary & Belissimo - 2025 NRHA Open Futurity Champion"></div>
+    <div class="form-row"><label>Rider / Host</label><input type="text" id="f-host" placeholder="Rider name or channel name"></div>
     <div class="form-row"><label>Category</label><select id="f-cat"><option>NRHA Futurity</option><option>NRHA Derby</option><option>The Run for a Million</option><option>100X</option><option>European Futurities</option><option>European Derbies</option><option>Other Events</option><option>Training</option><option>Young Horse</option><option>Legends</option><option>Lifestyle</option><option>Industry</option></select></div>
     <div class="form-row"><label>Trainer (if applicable)</label><select id="f-trainer"><option value="">Not specific to one trainer</option><option>Andrea Fappani</option><option>Shawn Flarida</option><option>Tom McCutcheon</option><option>Cade McCutcheon</option><option>Craig Schmersal</option><option>Casey Deary</option><option>Jason Vanlandingham</option><option>Duane Latimer</option><option>Todd Bergen</option><option>Mirjam Stillo</option><option>Franco Bertolani</option><option>Other</option></select></div>
-    <div class="form-row"><label>YouTube URL</label><input type="url" id="f-yt" placeholder="https://youtube.com/..."></div>
-    <div class="form-row"><label>Spotify / Apple / Website URL</label><input type="url" id="f-other" placeholder="https://..."></div>
-    <div class="form-row"><label>Short Description</label><textarea id="f-desc" placeholder="What is this show or channel about?"></textarea></div>
+    <div class="form-row"><label>Video URL *</label><input type="url" id="f-yt" placeholder="YouTube, Facebook, or Instagram URL"></div>
+    <div class="form-row"><label>Website / Source URL</label><input type="url" id="f-other" placeholder="https://..."></div>
+    <div class="form-row"><label>Short Description</label><textarea id="f-desc" placeholder="What happens in the video?"></textarea></div>
     <div class="modal-footer">
       <button class="btn-cancel" onclick="closeSubmitBtn()">Cancel</button>
       <button class="btn-submit" onclick="submitForm()">Submit →</button>
@@ -400,7 +394,7 @@ footer a:hover { color: var(--cream); }
 
 <footer>
   <div style="font-size:1rem;font-weight:700;color:var(--rope);margin-bottom:6px;">ReiningHorseVideos.com</div>
-  <div>The reining horse media directory — video, audio &amp; video podcasts.</div>
+  <div>The reining horse video directory — Futurity, Derby, RFAM &amp; top trainers.</div>
   <div style="margin-top:8px;">
     A <a href="https://www.bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property &nbsp;·&nbsp;
     <a href="https://www.worldsgreatesthorseman.com" target="_blank">WorldsGreatestHorseman.com</a> &nbsp;·&nbsp;
@@ -412,30 +406,69 @@ footer a:hover { color: var(--cream); }
 const SHOWS = [
   {
     id:1, featured:true,
-    title:"Casey Deary",
+    title:"Casey Deary &amp; Belissimo — 2025 NRHA Open Futurity Champion",
     host:"Casey Deary",
+    horse:"Belissimo",
+    year:2025,
     type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🎬",
-    desc:"NRHA $6 Million Dollar Rider. 4x NRHA Open Futurity Champion (2012, 2015, 2021, 2025). NRHA Open Derby Champion 2025. 3x The American Performance Horseman Champion. National Reining Breeders Classic Champion 2020. Ranked #4 on NRHA Leading Lifetime Riders. A Run for a Million qualifier every year since its 2019 inception, featured on Taylor Sheridan's The Last Cowboy. Endless public footage across NRHA, RFAM, and Quarter Horse News coverage — Futurity runs, Derby wins, and signature horses including Americasnextgunmodel, Shesouttayourleague, Ten Thirty, Maverick, Down Right Amazing, and Belissimo.",
-    website:"https://dearyperformance.com"
+    trainer:"deary", emoji:"🏆",
+    desc:"231.5 — the monster score that clinched the 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship and $350,000. Belissimo is a 2022 sorrel solid stallion by Magnum Chic Dream out of Americasnextgunmodel — the mare who carried Deary to his first Futurity title in 2012. The win pushed Deary past $6 million in lifetime NRHA earnings. Owned, bred, and nominated by Arcese Quarter Horses USA.",
+    facebook:"https://www.facebook.com/dearyperformancehorses/videos/834810882662182/"
   },
   {
     id:2, featured:true,
-    title:"Andrea Fappani",
-    host:"Andrea Fappani",
+    title:"Casey Deary &amp; Ten Thirty — 2021 NRHA Open Futurity Champion",
+    host:"Casey Deary",
+    horse:"Ten Thirty",
+    year:2021,
     type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"fappani", emoji:"🎬",
-    desc:"NRHA's first and only $10 Million Dollar Rider (2025) and All-Time Leading Rider. NRHA Hall of Fame inductee 2024. 4x NRHA Open Futurity Champion — RR Star (2001), Lil Joe Cash (2011), Spooky Whiz (2016), All Bettss Are Off (2020). NRHA European Futurity Champion. 4x National Reining Breeders Classic Open Champion. 2022 Run for a Million Reserve Champion aboard Trash Talkin Spook. Youngest NRHA Million Dollar Rider in history (2006). Originally from Bergamo, Italy — trained under Todd Bergen before launching his own program at Fappani Performance Horses in Scottsdale, AZ. In 2023 expanded into NRCHA cow horse competition, taking the Snaffle Bit Futurity Limited Open Championship. Endless public footage across NRHA, RFAM, 100X Reining Classic, American Performance Horseman, and Quarter Horse News coverage.",
-    website:"https://fappaniperformance.com"
+    trainer:"deary", emoji:"🏆",
+    desc:"Drawing first in the biggest show of the year, Deary and Ten Thirty marked a 223.5 that none of the other Level 4 Open finalists could match. Ten Thirty (Gunnatrashya x Dainty Little Step) was bought for $44,000 at the 2019 NRHA Markel Yearling Sale — the $350,000 first-place paycheck rocketed him past $369,000 in lifetime earnings. Owned by Rancho El Fortin of Coahuila, Mexico. Deary's third NRHA Open Futurity title.",
+    facebook:"https://www.facebook.com/QuarterHorseNews/videos/683742815930058/"
   },
   {
     id:3, featured:true,
-    title:"Cade McCutcheon",
-    host:"Cade McCutcheon",
+    title:"Casey Deary &amp; Down Right Amazing — 2024 American Performance Horseman",
+    host:"Casey Deary",
+    horse:"Down Right Amazing",
+    year:2024,
+    type:"video", category:"other-events", catLabel:"Other Events",
+    trainer:"deary", emoji:"🏆",
+    desc:"226.5 to win The American Performance Horseman Reining — a $100,000 payday in Arlington, Texas. Down Right Amazing (Colonels Smoking Gun x Shesouttayourleague) is a son of Deary's 2015 Futurity mare, making this a second-generation win. The stallion also won the 2023 NRHA Derby, the 2023 NRBC, and the 2022 Run for a Million Open Shootout. Owned by DAG Ventures LLC.",
+    facebook:"https://www.facebook.com/dearyperformancehorses/videos/1031928248035080/"
+  },
+  {
+    id:4, featured:false,
+    title:"Casey Deary &amp; Down Right Amazing — 2020 NRHA Futurity",
+    host:"Casey Deary",
+    horse:"Down Right Amazing",
+    year:2020,
     type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"cade-mccutcheon", emoji:"🎬",
-    desc:"NRHA $3 Million Dollar Rider (2025) — youngest rider to reach the $1M, $2M, and $3M milestones. 2019 NRHA Open Futurity Champion on Super Marioo at age 19 — the youngest Open Futurity Champion in NRHA history. 2019 Run for a Million Invitational Co-Champion. 2024 NRHA Derby Champion on All Nite Partier. Youngest U.S. athlete ever named to the Reining Squad for the 2018 World Equestrian Games. Third generation of a reining dynasty: son of NRHA $2M Rider Tom McCutcheon and NRHA $3M Non-Pro/Hall of Famer Mandy McCutcheon; grandson of NRHA $3M Rider/Hall of Famer Tim McQuay and Hall of Famer Colleen McQuay. Based at Tom McCutcheon Reining Horses in Aubrey, TX. Extensive public footage across NRHA Futurity/Derby broadcasts, Run for a Million, and The American Performance Horseman.",
-    website:"https://tmreining.com"
+    trainer:"deary", emoji:"🎬",
+    desc:"Third-place Futurity finish for Deary and Down Right Amazing — the run where Casey competed in a neck brace. Early glimpse of the stallion that would go on to win The American Performance Horseman, the 2022 Run for a Million Open Shootout, the 2023 NRHA Derby, and the 2023 NRBC.",
+    facebook:"https://www.facebook.com/dearyperformancehorses/videos/3662425774031966/"
+  },
+  {
+    id:5, featured:false,
+    title:"Casey Deary &amp; Down Right Amazing — 2022 NRBC Reserve Champion",
+    host:"Casey Deary",
+    horse:"Down Right Amazing",
+    year:2022,
+    type:"video", category:"other-events", catLabel:"Other Events",
+    trainer:"deary", emoji:"🥈",
+    desc:"National Reining Breeders Classic Level 4 Open Co-Reserve Champion. Another piece of the Down Right Amazing resume — a stallion whose name lived up to its billing across reining's biggest stages.",
+    facebook:"https://www.facebook.com/dearyperformancehorses/videos/660550581880212/"
+  },
+  {
+    id:6, featured:false,
+    title:"Casey Deary &amp; Maverickbuzthetower — NRHA Open Feature",
+    host:"Casey Deary",
+    horse:"Maverickbuzthetower",
+    year:2025,
+    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
+    trainer:"deary", emoji:"🎬",
+    desc:"Maverickbuzthetower — a 2022 sorrel overo APHA stallion by Americasnexttopgun — tied for 2025 NRHA Open Futurity Reserve Champion with Deary aboard, earning $130,000. Owned by Bosque Ranch Performance Horses LLC.",
+    instagram:"https://www.instagram.com/dearyperformancehorses/reel/DR5WMrfAY4s/"
   },
 ];
 
@@ -447,37 +480,36 @@ function setTrainer(el,trainer){ activeTrainer=trainer; document.querySelectorAl
 
 function matchesShow(s){
   const q=document.getElementById('searchInput').value.toLowerCase().trim();
-  const typeOk=activeType==='all'||s.type===activeType;
+  const typeOk=activeType==='all'||(activeType==='featured'&&s.featured);
   const catOk=activeCat==='all'||s.category===activeCat;
   const trainerOk=activeTrainer==='all'||s.trainer===activeTrainer;
-  const searchOk=!q||s.title.toLowerCase().includes(q)||s.host.toLowerCase().includes(q)||(s.desc&&s.desc.toLowerCase().includes(q))||s.catLabel.toLowerCase().includes(q);
+  const searchOk=!q||s.title.toLowerCase().includes(q)||(s.host&&s.host.toLowerCase().includes(q))||(s.desc&&s.desc.toLowerCase().includes(q))||s.catLabel.toLowerCase().includes(q)||(s.horse&&s.horse.toLowerCase().includes(q));
   return typeOk&&catOk&&trainerOk&&searchOk;
 }
 
-function typeBadge(type){
-  if(type==='video') return '<span class="type-badge type-video">🎬 Video</span>';
-  if(type==='audio') return '<span class="type-badge type-audio">🎙️ Podcast</span>';
-  if(type==='vidpod') return '<span class="type-badge type-vidpod">📹 Video Podcast</span>';
-  return '';
+function yearBadge(s){
+  return s.year?`<span class="year-badge">${s.year}</span>`:'';
 }
 
 function cardLinks(s){
   let h='';
   if(s.youtube) h+=`<a class="card-link link-yt" href="${s.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`;
-  if(s.spotify) h+=`<a class="card-link link-spotify" href="${s.spotify}" target="_blank" rel="noopener">♫ Spotify</a>`;
-  if(s.apple) h+=`<a class="card-link link-apple" href="${s.apple}" target="_blank" rel="noopener"> Apple</a>`;
+  if(s.facebook) h+=`<a class="card-link link-fb" href="${s.facebook}" target="_blank" rel="noopener">▶ Facebook</a>`;
+  if(s.instagram) h+=`<a class="card-link link-ig" href="${s.instagram}" target="_blank" rel="noopener">▶ Instagram</a>`;
   if(s.website) h+=`<a class="card-link link-web" href="${s.website}" target="_blank" rel="noopener">🌐 Website</a>`;
   return h;
 }
 
 function featuredCardHTML(s){
-  const art=s.artwork?`<img class="featured-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="featured-art-emoji">${s.emoji}</div>`;
-  return `<div class="featured-card" onclick="openDetail(${s.id})"><span class="featured-tag">⭐ Featured</span>${art}<div class="featured-body"><div class="featured-title">${s.title}</div><div class="featured-host">${s.host}</div><div class="featured-desc">${s.desc}</div><div class="card-links">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span>${cardLinks(s)}</div></div></div>`;
+  const art=s.artwork?`<img class="featured-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="featured-art-emoji">${s.emoji||'🎬'}</div>`;
+  const horseLine=s.horse?`<div class="featured-host">aboard ${s.horse}${s.host?' · '+s.host:''}</div>`:(s.host?`<div class="featured-host">${s.host}</div>`:'');
+  return `<div class="featured-card" onclick="openDetail(${s.id})"><span class="featured-tag">⭐ Featured</span>${art}<div class="featured-body"><div class="featured-title">${s.title}</div>${horseLine}<div class="featured-desc">${s.desc}</div><div class="card-links">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span>${cardLinks(s)}</div></div></div>`;
 }
 
 function podCardHTML(s){
-  const art=s.artwork?`<img class="pod-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="pod-art-emoji">${s.emoji}</div>`;
-  return `<div class="pod-card" onclick="openDetail(${s.id})"><div class="pod-card-top">${art}<div class="pod-info"><div class="pod-title">${s.title}</div><div class="pod-host">${s.host}</div></div></div><div class="pod-desc">${s.desc}</div><div class="pod-footer">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span></div></div>`;
+  const art=s.artwork?`<img class="pod-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="pod-art-emoji">${s.emoji||'🎬'}</div>`;
+  const horseLine=s.horse?`<div class="pod-host">aboard ${s.horse}${s.host?' · '+s.host:''}</div>`:(s.host?`<div class="pod-host">${s.host}</div>`:'');
+  return `<div class="pod-card" onclick="openDetail(${s.id})"><div class="pod-card-top">${art}<div class="pod-info"><div class="pod-title">${s.title}</div>${horseLine}</div></div><div class="pod-desc">${s.desc}</div><div class="pod-footer">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span></div></div>`;
 }
 
 function renderAll(){
@@ -485,7 +517,7 @@ function renderAll(){
   const featured=matching.filter(s=>s.featured);
   const regular=matching.filter(s=>!s.featured);
   const fGrid=document.getElementById('featuredGrid');
-  const pGrid=document.getElementById('podcastGrid');
+  const pGrid=document.getElementById('videoGrid');
   const fLabel=document.getElementById('featuredLabel');
   const rLabel=document.getElementById('regularLabel');
   const noRes=document.getElementById('noResults');
@@ -497,21 +529,21 @@ function renderAll(){
   else{pGrid.innerHTML='';noRes.style.display='block';pGrid.appendChild(noRes);}
   rLabel.style.display=matching.length?'':'none';
   const total=matching.length;
-  if(SHOWS.length===0){count.textContent='Directory launching soon — shows and channels being added';}
-  else{count.textContent=total===SHOWS.length?`Showing all ${total} shows & channels`:`Showing ${total} of ${SHOWS.length} shows & channels`;}
+  if(SHOWS.length===0){count.textContent='Directory launching soon — videos being added';}
+  else{count.textContent=total===SHOWS.length?`Showing all ${total} videos`:`Showing ${total} of ${SHOWS.length} videos`;}
   document.getElementById('stat-total').textContent=SHOWS.length;
 }
 
 function openDetail(id){
   const s=SHOWS.find(x=>x.id===id);
   if(!s) return;
-  const art=s.artwork?`<img class="detail-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="detail-art-emoji">${s.emoji}</div>`;
+  const art=s.artwork?`<img class="detail-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="detail-art-emoji">${s.emoji||'🎬'}</div>`;
   let links='';
   if(s.youtube) links+=`<a class="detail-link" href="${s.youtube}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on YouTube</a>`;
-  if(s.spotify) links+=`<a class="detail-link" href="${s.spotify}" target="_blank" rel="noopener"><span class="detail-link-icon">🎵</span> Listen on Spotify</a>`;
-  if(s.apple) links+=`<a class="detail-link" href="${s.apple}" target="_blank" rel="noopener"><span class="detail-link-icon">🎧</span> Listen on Apple Podcasts</a>`;
+  if(s.facebook) links+=`<a class="detail-link" href="${s.facebook}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on Facebook</a>`;
+  if(s.instagram) links+=`<a class="detail-link" href="${s.instagram}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on Instagram</a>`;
   if(s.website) links+=`<a class="detail-link" href="${s.website}" target="_blank" rel="noopener"><span class="detail-link-icon">🌐</span> Visit Website</a>`;
-  document.getElementById('detailContent').innerHTML=`${art}<div class="detail-title">${s.title}</div><div class="detail-host">${s.host}</div><div class="detail-badges">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span></div><div class="detail-desc">${s.desc}</div><div class="detail-links">${links}</div>`;
+  document.getElementById('detailContent').innerHTML=`${art}<div class="detail-title">${s.title}</div><div class="detail-host">${s.host||''}${s.horse?(s.host?' · aboard ':'aboard ')+s.horse:''}</div><div class="detail-badges">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span></div><div class="detail-desc">${s.desc}</div><div class="detail-links">${links}</div>`;
   document.getElementById('detailOverlay').classList.add('open');
   document.body.style.overflow='hidden';
 }
