@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="theme-color" content="#3D2B1F">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Reining Horse Videos — The Best Reining Video & Podcast Directory</title>
+<meta name="description" content="The ultimate reining horse media directory. Video channels, audio podcasts, and video podcasts covering the NRHA Futurity, NRHA Derby, The Run for a Million, 100X, European futurities and derbies, top trainers, and the reining lifestyle.">
+<meta property="og:title" content="Reining Horse Videos — Video & Podcast Directory">
+<meta property="og:description" content="The best reining horse video channels, podcasts, and video podcasts all in one place.">
+<meta property="og:url" content="https://www.reininghorsevideos.com">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://www.reininghorsevideos.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+*:focus { outline: 2px solid var(--rope); outline-offset: 2px; }
+html { touch-action: manipulation; overflow-x: hidden; }
+body { overflow-x: hidden; }
+
+:root {
+  --sand: #F5F0E8;
+  --sand-dark: #E8DFD0;
+  --leather: #8B5E3C;
+  --leather-dark: #6B4226;
+  --leather-deeper: #4A2D18;
+  --rope: #C4A265;
+  --rope-light: #D4BA85;
+  --rope-pale: #EDE3CC;
+  --ink: #2C1810;
+  --ink-soft: #5A4535;
+  --ink-muted: #8B7B6B;
+  --cream: #FFFBF5;
+  --rust: #B8512A;
+  --white: #FFFFFF;
+  --border: rgba(139,94,60,0.12);
+  --border-strong: rgba(139,94,60,0.25);
+  --shadow-sm: 0 1px 3px rgba(44,24,16,0.06);
+  --shadow-md: 0 4px 16px rgba(44,24,16,0.08);
+  --shadow-lg: 0 8px 32px rgba(44,24,16,0.12);
+  --radius: 10px;
+  --radius-lg: 14px;
+  --transition: 0.2s ease;
+}
+
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+  padding-bottom: env(safe-area-inset-bottom);
+  font-family: 'Outfit', -apple-system, sans-serif;
+  background: var(--sand);
+  color: var(--ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+}
+
+/* TOPBAR */
+.topbar {
+  background: linear-gradient(135deg, var(--leather-deeper) 0%, var(--leather-dark) 100%);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+.topbar-brand { display: flex; align-items: center; gap: 10px; }
+.topbar-logo { font-size: 1.9rem; font-weight: 900; color: var(--cream); letter-spacing: -0.5px; }
+.topbar-logo span { color: var(--rope-light); }
+.topbar-sub { font-size: 0.78rem; color: rgba(255,251,245,0.6); font-weight: 400; }
+.topbar-right { display: flex; align-items: center; gap: 10px; }
+.submit-btn {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: var(--cream);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 6px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.submit-btn:hover { background: rgba(255,255,255,0.2); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(160deg, var(--leather-deeper) 0%, var(--leather-dark) 60%, var(--leather) 100%);
+  padding: 32px 20px 28px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-block;
+  background: rgba(255,255,255,0.12);
+  color: var(--rope-light);
+  font-size: 0.68rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 2.5px;
+  padding: 4px 14px; border-radius: 20px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(196,162,101,0.3);
+}
+.hero h1 { font-size: 2.2rem; font-weight: 900; color: var(--cream); line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 6px; }
+.hero h1 span { color: var(--rope-light); font-style: normal; }
+.hero p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 20px; line-height: 1.5; }
+#heroBanner { margin: 0 auto 20px; max-width: 320px; width: 90%; cursor: pointer; }
+#heroBanner img { width: 100%; height: auto; display: block; border-radius: 4px; }
+.hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
+.hero-stat { text-align: center; padding: 10px 16px; }
+.stat-num { font-size: 1.5rem; font-weight: 800; color: var(--cream); line-height: 1; }
+.stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
+
+/* CONTROLS */
+.controls {
+  background: var(--white);
+  border-bottom: 2px solid var(--border);
+  padding: 14px 16px;
+  position: sticky;
+  top: 58px;
+  z-index: 90;
+  box-shadow: var(--shadow-sm);
+}
+.search-wrap { position: relative; margin-bottom: 12px; }
+.search-wrap input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: 'Outfit', sans-serif;
+  background: var(--white);
+  color: var(--ink);
+}
+.search-wrap input:focus { border-color: var(--rope); outline: none; }
+.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #999; pointer-events: none; }
+.chip-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-muted); margin-bottom: 6px; }
+.chip-row { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; -ms-overflow-style: none; margin-bottom: 8px; }
+.chip-row::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0;
+  background: var(--white);
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.82rem; font-weight: 500;
+  padding: 6px 14px; border-radius: 20px;
+  cursor: pointer; transition: var(--transition); white-space: nowrap;
+}
+.chip:hover, .chip.active { background: var(--leather); color: var(--cream); border-color: var(--leather); }
+#showingCount { font-size: 0.78rem; color: var(--ink-muted); margin-top: 8px; }
+
+/* MAIN */
+.main { padding: 20px 16px 80px; max-width: 900px; margin: 0 auto; }
+.section-label {
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
+  color: var(--ink-muted); margin-bottom: 12px; padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+
+/* FEATURED CARD */
+.featured-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
+.featured-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex; gap: 14px; align-items: flex-start;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition);
+  position: relative; overflow: hidden; cursor: pointer;
+}
+.featured-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--rope); }
+.featured-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border-strong); }
+.featured-tag {
+  position: absolute; top: 10px; right: 10px;
+  font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
+  background: var(--rope-pale); color: var(--leather-dark);
+  padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border);
+}
+.featured-art { width: 72px; height: 72px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: var(--sand); }
+.featured-art-emoji { width: 72px; height: 72px; border-radius: 8px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
+.featured-body { flex: 1; min-width: 0; }
+.featured-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; padding-right: 60px; }
+.featured-host { font-size: 0.78rem; color: var(--leather); font-weight: 600; margin-bottom: 6px; }
+.featured-desc { font-size: 0.78rem; color: var(--ink-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; }
+.card-links { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
+.card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; text-decoration: none; transition: var(--transition); border: 1px solid transparent; }
+.link-yt { background: #fff0f0; color: #c0392b; border-color: #f5c6c6; }
+.link-yt:hover { background: #ffe0e0; }
+.link-spotify { background: #f0faf3; color: #1a7d43; border-color: #b8e8c8; }
+.link-spotify:hover { background: #dcf5e5; }
+.link-apple { background: #fff0f5; color: #c0304b; border-color: #f5c0cc; }
+.link-apple:hover { background: #ffe0ea; }
+.link-web { background: var(--rope-pale); color: var(--leather-dark); border-color: var(--border); }
+.link-web:hover { background: var(--sand-dark); }
+
+/* TYPE & CAT BADGES */
+.type-badge { display: inline-flex; align-items: center; gap: 3px; font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.8px; padding: 2px 7px; border-radius: 4px; margin-right: 5px; }
+.type-video { background: #fff0ee; color: var(--rust); }
+.type-audio { background: var(--rope-pale); color: var(--leather-dark); }
+.type-vidpod { background: #e8eddf; color: #4a7239; }
+.cat-badge { display: inline-flex; align-items: center; font-size: 0.62rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; background: var(--sand-dark); color: var(--ink-soft); }
+
+/* GRID */
+.podcast-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
+@media (max-width: 600px) { .podcast-grid { grid-template-columns: 1fr; } }
+.pod-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); transition: all var(--transition); cursor: pointer; }
+.pod-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border-strong); }
+.pod-card-top { display: flex; gap: 10px; align-items: flex-start; }
+.pod-art { width: 52px; height: 52px; border-radius: 7px; object-fit: cover; flex-shrink: 0; background: var(--sand); }
+.pod-art-emoji { width: 52px; height: 52px; border-radius: 7px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
+.pod-info { flex: 1; min-width: 0; }
+.pod-title { font-size: 0.88rem; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 2px; }
+.pod-host { font-size: 0.72rem; color: var(--leather); font-weight: 600; }
+.pod-desc { font-size: 0.75rem; color: var(--ink-muted); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.pod-footer { display: flex; gap: 5px; flex-wrap: wrap; }
+
+/* NO RESULTS */
+#noResults { display: none; text-align: center; padding: 60px 20px; color: var(--ink-muted); grid-column: 1/-1; }
+#noResults .no-icon { font-size: 2.5rem; margin-bottom: 10px; }
+
+/* DETAIL OVERLAY */
+.overlay { display: none; position: fixed; inset: 0; background: rgba(44,24,16,0.7); z-index: 500; align-items: flex-end; justify-content: center; }
+.overlay.open { display: flex; }
+@media (min-width: 600px) { .overlay { align-items: center; } }
+.detail-sheet { background: var(--cream); border: 1px solid var(--border); border-radius: 16px 16px 0 0; width: 100%; max-width: 560px; max-height: 90vh; overflow-y: auto; padding: 24px 20px 40px; position: relative; animation: slideUp 0.25s ease; }
+@media (min-width: 600px) { .detail-sheet { border-radius: 16px; } }
+@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+.detail-close { position: absolute; top: 14px; right: 14px; background: var(--sand); border: 1px solid var(--border); color: var(--ink-muted); font-size: 1.2rem; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+.detail-art { width: 90px; height: 90px; border-radius: 10px; object-fit: cover; margin-bottom: 14px; background: var(--sand); }
+.detail-art-emoji { width: 90px; height: 90px; border-radius: 10px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; margin-bottom: 14px; }
+.detail-title { font-size: 1.3rem; font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.detail-host { font-size: 0.88rem; color: var(--leather); font-weight: 600; margin-bottom: 10px; }
+.detail-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.detail-desc { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; margin-bottom: 18px; }
+.detail-links { display: flex; flex-direction: column; gap: 8px; }
+.detail-link { display: flex; align-items: center; gap: 10px; background: var(--sand); border: 1px solid var(--border); border-radius: 10px; padding: 12px 14px; text-decoration: none; color: var(--ink); font-size: 0.88rem; font-weight: 600; transition: var(--transition); }
+.detail-link:hover { border-color: var(--border-strong); background: var(--sand-dark); }
+.detail-link-icon { font-size: 1.2rem; }
+
+/* SUBMIT MODAL */
+.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,24,16,0.7); z-index: 600; align-items: center; justify-content: center; padding: 20px; }
+.modal-overlay.open { display: flex; }
+.modal-box { background: var(--cream); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
+.modal-title { font-size: 1.2rem; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
+.modal-sub { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 18px; }
+.form-row { margin-bottom: 14px; }
+.form-row label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--leather); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
+.form-row input, .form-row select, .form-row textarea { width: 100%; background: var(--white); border: 1px solid #ddd; border-radius: 7px; padding: 9px 12px; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.88rem; }
+.form-row textarea { height: 80px; resize: vertical; }
+.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--rope); }
+.modal-footer { display: flex; gap: 10px; margin-top: 18px; }
+.btn-cancel { flex: 1; background: var(--sand); border: 1px solid var(--border); color: var(--ink-muted); font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600; padding: 10px; border-radius: 8px; cursor: pointer; }
+.btn-submit { flex: 2; background: var(--leather); border: none; color: var(--cream); font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; cursor: pointer; }
+.btn-submit:hover { background: var(--leather-dark); }
+
+/* FOOTER */
+footer { background: linear-gradient(135deg, var(--leather-deeper) 0%, var(--leather-dark) 100%); border-top: 1px solid var(--border); padding: 24px 20px; text-align: center; font-size: 0.78rem; color: rgba(255,251,245,0.6); line-height: 1.8; }
+footer a { color: var(--rope-light); text-decoration: none; }
+footer a:hover { color: var(--cream); }
+
+@media (max-width: 600px) {
+  .hero h1 { font-size: 1.75rem; }
+  .topbar-sub { display: none; }
+  .hero-stats { gap: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .hero-stat { padding: 8px 6px; }
+  .stat-num { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<header class="topbar">
+  <div>
+    <div class="topbar-brand">Reining<span>Horse</span>Videos</div>
+    <div class="topbar-sub">Video &amp; Podcast Directory</div>
+  </div>
+  <div>
+    <button class="submit-btn" onclick="openSubmit()">+ Submit</button>
+  </div>
+</header>
+
+<div class="hero">
+  <div class="hero-site-title">Reining Horse Media Hub</div>
+  <h1>The Best Reining Horse <span>Videos &amp; Podcasts</span></h1>
+  <p>Video channels, audio podcasts, and video podcasts covering the NRHA Futurity, NRHA Derby, The Run for a Million, 100X, European futurities and derbies, top trainers, and the reining lifestyle.</p>
+  <div id="heroBanner" onclick="window.open(bannerAds[currentBanner].url,'_blank')">
+    <img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Sponsor" loading="lazy" width="320" height="100">
+  </div>
+  <script>
+  var bannerAds=[
+    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public",url:"https://www.blackangus.com",alt:"Black Angus Steakhouse"},
+    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-k4-gourmet-beef/public",url:"https://www.k4ranch.com",alt:"K4 Gourmet Beef"},
+  ];
+  var currentBanner=0;
+  function rotateBanner(){currentBanner=(currentBanner+1)%bannerAds.length;var i=document.getElementById('bannerImg');if(i){i.src=bannerAds[currentBanner].img;i.alt=bannerAds[currentBanner].alt;}}
+  setInterval(rotateBanner,5000);
+  </script>
+  <div class="hero-stats">
+    <div class="hero-stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Shows &amp; Channels</div></div>
+    <div class="hero-stat"><div class="stat-num">3</div><div class="stat-label">Media Types</div></div>
+    <div class="hero-stat"><div class="stat-num" id="stat-cats">12</div><div class="stat-label">Categories</div></div>
+  </div>
+</div>
+
+<div class="controls">
+  <div class="search-wrap">
+    <span class="search-icon">🔍</span>
+    <input type="text" id="searchInput" placeholder="Search shows, hosts, topics..." oninput="renderAll()" autocomplete="off">
+  </div>
+  <div class="chip-label">Media Type</div>
+  <div class="chip-row" id="typeChips">
+    <button class="chip active" data-type="all" onclick="setType(this,'all')">All Types</button>
+    <button class="chip" data-type="video" onclick="setType(this,'video')">🎬 Video</button>
+    <button class="chip" data-type="audio" onclick="setType(this,'audio')">🎙️ Audio Podcast</button>
+    <button class="chip" data-type="vidpod" onclick="setType(this,'vidpod')">📹 Video Podcast</button>
+  </div>
+  <div class="chip-label" style="margin-top:8px;">Category</div>
+  <div class="chip-row" id="catChips">
+    <button class="chip active" data-cat="all" onclick="setCat(this,'all')">All</button>
+    <button class="chip" data-cat="nrha-futurity" onclick="setCat(this,'nrha-futurity')">NRHA Futurity</button>
+    <button class="chip" data-cat="nrha-derby" onclick="setCat(this,'nrha-derby')">NRHA Derby</button>
+    <button class="chip" data-cat="rfam" onclick="setCat(this,'rfam')">The Run for a Million</button>
+    <button class="chip" data-cat="100x" onclick="setCat(this,'100x')">100X</button>
+    <button class="chip" data-cat="euro-futurity" onclick="setCat(this,'euro-futurity')">European Futurities</button>
+    <button class="chip" data-cat="euro-derby" onclick="setCat(this,'euro-derby')">European Derbies</button>
+    <button class="chip" data-cat="other-events" onclick="setCat(this,'other-events')">Other Events</button>
+    <button class="chip" data-cat="training" onclick="setCat(this,'training')">Training</button>
+    <button class="chip" data-cat="young-horse" onclick="setCat(this,'young-horse')">Young Horse</button>
+    <button class="chip" data-cat="legends" onclick="setCat(this,'legends')">Legends</button>
+    <button class="chip" data-cat="lifestyle" onclick="setCat(this,'lifestyle')">Lifestyle</button>
+    <button class="chip" data-cat="industry" onclick="setCat(this,'industry')">Industry</button>
+  </div>
+  <div class="chip-label" style="margin-top:8px;">Trainer</div>
+  <div class="chip-row" id="trainerChips">
+    <button class="chip active" data-trainer="all" onclick="setTrainer(this,'all')">All Trainers</button>
+    <button class="chip" data-trainer="fappani" onclick="setTrainer(this,'fappani')">Andrea Fappani</button>
+    <button class="chip" data-trainer="flarida" onclick="setTrainer(this,'flarida')">Shawn Flarida</button>
+    <button class="chip" data-trainer="mccutcheon" onclick="setTrainer(this,'mccutcheon')">Tom McCutcheon</button>
+    <button class="chip" data-trainer="schmersal" onclick="setTrainer(this,'schmersal')">Craig Schmersal</button>
+    <button class="chip" data-trainer="deary" onclick="setTrainer(this,'deary')">Casey Deary</button>
+    <button class="chip" data-trainer="vanlandingham" onclick="setTrainer(this,'vanlandingham')">Jason Vanlandingham</button>
+    <button class="chip" data-trainer="latimer" onclick="setTrainer(this,'latimer')">Duane Latimer</button>
+    <button class="chip" data-trainer="bergen" onclick="setTrainer(this,'bergen')">Todd Bergen</button>
+    <button class="chip" data-trainer="stillo" onclick="setTrainer(this,'stillo')">Mirjam Stillo</button>
+    <button class="chip" data-trainer="bertolani" onclick="setTrainer(this,'bertolani')">Franco Bertolani</button>
+  </div>
+  <div id="showingCount">Showing all shows &amp; channels</div>
+</div>
+
+<main class="main">
+  <div id="featuredLabel" class="section-label">⭐ Featured</div>
+  <div id="featuredGrid" class="featured-grid"></div>
+  <div id="regularLabel" class="section-label">All Shows &amp; Channels</div>
+  <div id="podcastGrid" class="podcast-grid">
+    <div id="noResults"><div class="no-icon">🤠</div><div>No results found. Try a different search.</div></div>
+  </div>
+</main>
+
+<div class="overlay" id="detailOverlay" onclick="closeDetail(event)">
+  <div class="detail-sheet" id="detailSheet">
+    <button class="detail-close" onclick="closeDetailBtn()">✕</button>
+    <div id="detailContent"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="submitModal" onclick="closeSubmit(event)">
+  <div class="modal-box" onclick="event.stopPropagation()">
+    <div class="modal-title">Submit a Show or Channel</div>
+    <div class="modal-sub">Free listing — no pay-to-play, ever. Reviewed within 48 hours.</div>
+    <div class="form-row"><label>Show / Channel Name *</label><input type="text" id="f-name" placeholder="e.g. NRHA Ride the Pattern"></div>
+    <div class="form-row"><label>Host / Creator</label><input type="text" id="f-host" placeholder="Your name or channel name"></div>
+    <div class="form-row"><label>Media Type *</label><select id="f-type"><option value="">Select type...</option><option>🎬 Video Channel</option><option>🎙️ Audio Podcast</option><option>📹 Video Podcast</option></select></div>
+    <div class="form-row"><label>Category</label><select id="f-cat"><option>NRHA Futurity</option><option>NRHA Derby</option><option>The Run for a Million</option><option>100X</option><option>European Futurities</option><option>European Derbies</option><option>Other Events</option><option>Training</option><option>Young Horse</option><option>Legends</option><option>Lifestyle</option><option>Industry</option></select></div>
+    <div class="form-row"><label>Trainer (if applicable)</label><select id="f-trainer"><option value="">Not specific to one trainer</option><option>Andrea Fappani</option><option>Shawn Flarida</option><option>Tom McCutcheon</option><option>Craig Schmersal</option><option>Casey Deary</option><option>Jason Vanlandingham</option><option>Duane Latimer</option><option>Todd Bergen</option><option>Mirjam Stillo</option><option>Franco Bertolani</option><option>Other</option></select></div>
+    <div class="form-row"><label>YouTube URL</label><input type="url" id="f-yt" placeholder="https://youtube.com/..."></div>
+    <div class="form-row"><label>Spotify / Apple / Website URL</label><input type="url" id="f-other" placeholder="https://..."></div>
+    <div class="form-row"><label>Short Description</label><textarea id="f-desc" placeholder="What is this show or channel about?"></textarea></div>
+    <div class="modal-footer">
+      <button class="btn-cancel" onclick="closeSubmitBtn()">Cancel</button>
+      <button class="btn-submit" onclick="submitForm()">Submit →</button>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div style="font-size:1rem;font-weight:700;color:var(--rope);margin-bottom:6px;">ReiningHorseVideos.com</div>
+  <div>The reining horse media directory — video, audio &amp; video podcasts.</div>
+  <div style="margin-top:8px;">
+    A <a href="https://www.bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property &nbsp;·&nbsp;
+    <a href="https://www.worldsgreatesthorseman.com" target="_blank">WorldsGreatestHorseman.com</a> &nbsp;·&nbsp;
+    <a href="https://www.teamropingvideos.com" target="_blank">TeamRopingVideos.com</a>
+  </div>
+</footer>
+
+<script>
+const SHOWS = [
+  // Shows & channels will be added as we build out the directory.
+  // Each entry structure:
+  // { id:N, featured:bool, title:"", host:"", type:"video|audio|vidpod",
+  //   category:"cat-slug", catLabel:"Display Label",
+  //   trainer:"trainer-slug" (optional), emoji:"",
+  //   desc:"", youtube:"", spotify:"", apple:"", website:"", artwork:"" }
+];
+
+let activeType='all', activeCat='all', activeTrainer='all';
+
+function setType(el,type){ activeType=type; document.querySelectorAll('#typeChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
+function setCat(el,cat){ activeCat=cat; document.querySelectorAll('#catChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
+function setTrainer(el,trainer){ activeTrainer=trainer; document.querySelectorAll('#trainerChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
+
+function matchesShow(s){
+  const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  const typeOk=activeType==='all'||s.type===activeType;
+  const catOk=activeCat==='all'||s.category===activeCat;
+  const trainerOk=activeTrainer==='all'||s.trainer===activeTrainer;
+  const searchOk=!q||s.title.toLowerCase().includes(q)||s.host.toLowerCase().includes(q)||(s.desc&&s.desc.toLowerCase().includes(q))||s.catLabel.toLowerCase().includes(q);
+  return typeOk&&catOk&&trainerOk&&searchOk;
+}
+
+function typeBadge(type){
+  if(type==='video') return '<span class="type-badge type-video">🎬 Video</span>';
+  if(type==='audio') return '<span class="type-badge type-audio">🎙️ Podcast</span>';
+  if(type==='vidpod') return '<span class="type-badge type-vidpod">📹 Video Podcast</span>';
+  return '';
+}
+
+function cardLinks(s){
+  let h='';
+  if(s.youtube) h+=`<a class="card-link link-yt" href="${s.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`;
+  if(s.spotify) h+=`<a class="card-link link-spotify" href="${s.spotify}" target="_blank" rel="noopener">♫ Spotify</a>`;
+  if(s.apple) h+=`<a class="card-link link-apple" href="${s.apple}" target="_blank" rel="noopener"> Apple</a>`;
+  if(s.website) h+=`<a class="card-link link-web" href="${s.website}" target="_blank" rel="noopener">🌐 Website</a>`;
+  return h;
+}
+
+function featuredCardHTML(s){
+  const art=s.artwork?`<img class="featured-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="featured-art-emoji">${s.emoji}</div>`;
+  return `<div class="featured-card" onclick="openDetail(${s.id})"><span class="featured-tag">⭐ Featured</span>${art}<div class="featured-body"><div class="featured-title">${s.title}</div><div class="featured-host">${s.host}</div><div class="featured-desc">${s.desc}</div><div class="card-links">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span>${cardLinks(s)}</div></div></div>`;
+}
+
+function podCardHTML(s){
+  const art=s.artwork?`<img class="pod-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="pod-art-emoji">${s.emoji}</div>`;
+  return `<div class="pod-card" onclick="openDetail(${s.id})"><div class="pod-card-top">${art}<div class="pod-info"><div class="pod-title">${s.title}</div><div class="pod-host">${s.host}</div></div></div><div class="pod-desc">${s.desc}</div><div class="pod-footer">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span></div></div>`;
+}
+
+function renderAll(){
+  const matching=SHOWS.filter(matchesShow);
+  const featured=matching.filter(s=>s.featured);
+  const regular=matching.filter(s=>!s.featured);
+  const fGrid=document.getElementById('featuredGrid');
+  const pGrid=document.getElementById('podcastGrid');
+  const fLabel=document.getElementById('featuredLabel');
+  const rLabel=document.getElementById('regularLabel');
+  const noRes=document.getElementById('noResults');
+  const count=document.getElementById('showingCount');
+  fLabel.style.display=featured.length?'':'none';
+  fGrid.style.display=featured.length?'':'none';
+  fGrid.innerHTML=featured.map(featuredCardHTML).join('');
+  if(regular.length){noRes.style.display='none';pGrid.innerHTML=regular.map(podCardHTML).join('');}
+  else{pGrid.innerHTML='';noRes.style.display='block';pGrid.appendChild(noRes);}
+  rLabel.style.display=matching.length?'':'none';
+  const total=matching.length;
+  if(SHOWS.length===0){count.textContent='Directory launching soon — shows and channels being added';}
+  else{count.textContent=total===SHOWS.length?`Showing all ${total} shows & channels`:`Showing ${total} of ${SHOWS.length} shows & channels`;}
+  document.getElementById('stat-total').textContent=SHOWS.length;
+}
+
+function openDetail(id){
+  const s=SHOWS.find(x=>x.id===id);
+  if(!s) return;
+  const art=s.artwork?`<img class="detail-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="detail-art-emoji">${s.emoji}</div>`;
+  let links='';
+  if(s.youtube) links+=`<a class="detail-link" href="${s.youtube}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on YouTube</a>`;
+  if(s.spotify) links+=`<a class="detail-link" href="${s.spotify}" target="_blank" rel="noopener"><span class="detail-link-icon">🎵</span> Listen on Spotify</a>`;
+  if(s.apple) links+=`<a class="detail-link" href="${s.apple}" target="_blank" rel="noopener"><span class="detail-link-icon">🎧</span> Listen on Apple Podcasts</a>`;
+  if(s.website) links+=`<a class="detail-link" href="${s.website}" target="_blank" rel="noopener"><span class="detail-link-icon">🌐</span> Visit Website</a>`;
+  document.getElementById('detailContent').innerHTML=`${art}<div class="detail-title">${s.title}</div><div class="detail-host">${s.host}</div><div class="detail-badges">${typeBadge(s.type)}<span class="cat-badge">${s.catLabel}</span></div><div class="detail-desc">${s.desc}</div><div class="detail-links">${links}</div>`;
+  document.getElementById('detailOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function closeDetail(e){if(e.target===document.getElementById('detailOverlay'))closeDetailBtn();}
+function closeDetailBtn(){document.getElementById('detailOverlay').classList.remove('open');document.body.style.overflow='';}
+function openSubmit(){document.getElementById('submitModal').classList.add('open');}
+function closeSubmit(e){if(e.target===document.getElementById('submitModal'))closeSubmitBtn();}
+function closeSubmitBtn(){document.getElementById('submitModal').classList.remove('open');}
+function submitForm(){
+  const name=document.getElementById('f-name').value.trim();
+  if(!name){alert('Please enter a show or channel name.');return;}
+  alert("Thanks for your submission! We'll review it within 48 hours and add it to the directory.");
+  closeSubmitBtn();
+}
+renderAll();
+</script>
+</body>
+</html>
