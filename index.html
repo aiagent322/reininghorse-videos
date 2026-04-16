@@ -6,10 +6,10 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<title>Reining Horse Videos — The Best Reining Video Directory</title>
-<meta name="description" content="The ultimate reining horse video directory. Futurity runs, Derby championships, Run for a Million showdowns, 100X, European futurities, top trainers, and signature horses — all in one place.">
-<meta property="og:title" content="Reining Horse Videos — Video Directory">
-<meta property="og:description" content="The best reining horse videos all in one place. Futurity, Derby, Run for a Million, and top-trainer footage.">
+<title>Reining Horse Videos — The Best Reining Videos on YouTube, Ranked & Curated</title>
+<meta name="description" content="The best reining horse videos on YouTube — ranked and curated. NRHA Futurity, NRHA Derby, The Run for a Million, 100X, European Futurities, top trainers, and signature horses.">
+<meta property="og:title" content="Reining Horse Videos — Ranked & Curated">
+<meta property="og:description" content="The best reining horse videos on YouTube, ranked and curated.">
 <meta property="og:url" content="https://www.reininghorsevideos.com">
 <meta property="og:type" content="website">
 <link rel="canonical" href="https://www.reininghorsevideos.com">
@@ -18,324 +18,105 @@
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <style>
 * { box-sizing: border-box; margin: 0; padding: 0; }
-*:focus { outline: 2px solid var(--rope); outline-offset: 2px; }
-html { touch-action: manipulation; overflow-x: hidden; }
-body { overflow-x: hidden; }
-
+html { touch-action: manipulation; overflow-x: hidden; -webkit-text-size-adjust: 100%; }
+body { overflow-x: hidden; font-family: 'Outfit', -apple-system, sans-serif; background: #F5F0E8; color: #2C1810; -webkit-font-smoothing: antialiased; }
 :root {
-  --sand: #F5F0E8;
-  --sand-dark: #E8DFD0;
-  --leather: #8B5E3C;
-  --leather-dark: #6B4226;
-  --leather-deeper: #4A2D18;
-  --rope: #C4A265;
-  --rope-light: #D4BA85;
-  --rope-pale: #EDE3CC;
-  --ink: #2C1810;
-  --ink-soft: #5A4535;
-  --ink-muted: #8B7B6B;
-  --cream: #FFFBF5;
-  --rust: #B8512A;
-  --white: #FFFFFF;
-  --border: rgba(139,94,60,0.12);
-  --border-strong: rgba(139,94,60,0.25);
-  --shadow-sm: 0 1px 3px rgba(44,24,16,0.06);
-  --shadow-md: 0 4px 16px rgba(44,24,16,0.08);
-  --shadow-lg: 0 8px 32px rgba(44,24,16,0.12);
-  --radius: 10px;
-  --radius-lg: 14px;
-  --transition: 0.2s ease;
+  --sand: #F5F0E8; --sand-dark: #E8DFD0; --leather: #8B5E3C; --leather-dark: #6B4226;
+  --leather-deeper: #4A2D18; --rope: #C4A265; --rope-light: #D4BA85; --rope-pale: #EDE3CC;
+  --ink: #2C1810; --ink-soft: #5A4535; --ink-muted: #8B7B6B; --cream: #FFFBF5;
+  --border: rgba(139,94,60,0.12); --border-strong: rgba(139,94,60,0.25);
+  --shadow-sm: 0 1px 3px rgba(44,24,16,0.08); --shadow-md: 0 4px 16px rgba(44,24,16,0.12);
+  --radius: 8px; --transition: 0.18s ease;
 }
-
-body {
-  padding-left: env(safe-area-inset-left);
-  padding-right: env(safe-area-inset-right);
-  padding-bottom: env(safe-area-inset-bottom);
-  font-family: 'Outfit', -apple-system, sans-serif;
-  background: var(--sand);
-  color: var(--ink);
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
-  min-height: 100vh;
-}
-
-/* TOPBAR */
-.topbar {
-  background: linear-gradient(135deg, var(--leather-deeper) 0%, var(--leather-dark) 100%);
-  padding: 14px 20px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
-}
-.topbar-brand { display: flex; align-items: center; gap: 10px; }
-.topbar-logo { font-size: 1.9rem; font-weight: 900; color: var(--cream); letter-spacing: -0.5px; }
-.topbar-logo span { color: var(--rope-light); }
-.topbar-sub { font-size: 0.78rem; color: rgba(255,251,245,0.6); font-weight: 400; }
-.topbar-right { display: flex; align-items: center; gap: 10px; }
-.submit-btn {
-  background: rgba(255,255,255,0.12);
-  border: 1px solid rgba(255,255,255,0.2);
-  color: var(--cream);
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.78rem;
-  font-weight: 600;
-  padding: 6px 14px;
-  border-radius: 6px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-.submit-btn:hover { background: rgba(255,255,255,0.2); }
-
-/* HERO */
-.hero {
-  background: linear-gradient(160deg, var(--leather-deeper) 0%, var(--leather-dark) 60%, var(--leather) 100%);
-  padding: 32px 20px 28px;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-.hero::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
-  pointer-events: none;
-}
-.hero-badge {
-  display: inline-block;
-  background: rgba(255,255,255,0.12);
-  color: var(--rope-light);
-  font-size: 0.68rem; font-weight: 700;
-  text-transform: uppercase; letter-spacing: 2.5px;
-  padding: 4px 14px; border-radius: 20px;
-  margin-bottom: 10px;
-  border: 1px solid rgba(196,162,101,0.3);
-}
-.hero h1 { font-size: 2.2rem; font-weight: 900; color: var(--cream); line-height: 1.1; letter-spacing: -0.5px; margin-bottom: 6px; }
-.hero h1 span { color: var(--rope-light); font-style: normal; }
-.hero p { font-size: 1rem; color: rgba(255,255,255,0.7); max-width: 480px; margin: 0 auto 20px; line-height: 1.5; }
-#heroBanner { margin: 0 auto 20px; max-width: 320px; width: 90%; cursor: pointer; }
-#heroBanner img { width: 100%; height: auto; display: block; border-radius: 4px; }
-.hero-stats { display: flex; justify-content: center; gap: 32px; flex-wrap: wrap; }
-.hero-stat { text-align: center; padding: 10px 16px; }
-.stat-num { font-size: 1.5rem; font-weight: 800; color: var(--cream); line-height: 1; }
-.stat-label { font-size: 0.72rem; color: rgba(255,255,255,0.6); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; margin-top: 2px; }
-
-/* CONTROLS */
-.controls {
-  background: var(--white);
-  border-bottom: 2px solid var(--border);
-  padding: 14px 16px;
-  position: sticky;
-  top: 58px;
-  z-index: 90;
-  box-shadow: var(--shadow-sm);
-}
-.search-wrap { position: relative; margin-bottom: 12px; }
-.search-wrap input {
-  width: 100%;
-  padding: 10px 14px 10px 38px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-family: 'Outfit', sans-serif;
-  background: var(--white);
-  color: var(--ink);
-}
-.search-wrap input:focus { border-color: var(--rope); outline: none; }
-.search-icon { position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: #999; pointer-events: none; }
-.chip-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: var(--ink-muted); margin-bottom: 6px; }
-.chip-row { display: flex; gap: 6px; overflow-x: auto; padding-bottom: 6px; scrollbar-width: none; -ms-overflow-style: none; margin-bottom: 8px; }
-.chip-row::-webkit-scrollbar { display: none; }
-.chip {
-  flex-shrink: 0;
-  background: var(--white);
-  border: 1px solid var(--border);
-  color: var(--ink-muted);
-  font-family: 'Outfit', sans-serif;
-  font-size: 0.82rem; font-weight: 500;
-  padding: 6px 14px; border-radius: 20px;
-  cursor: pointer; transition: var(--transition); white-space: nowrap;
-}
-.chip:hover, .chip.active { background: var(--leather); color: var(--cream); border-color: var(--leather); }
-#showingCount { font-size: 0.78rem; color: var(--ink-muted); margin-top: 8px; }
-
-/* MAIN */
-.main { padding: 20px 16px 80px; max-width: 900px; margin: 0 auto; }
-.section-label {
-  font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px;
-  color: var(--ink-muted); margin-bottom: 12px; padding-bottom: 6px;
-  border-bottom: 1px solid var(--border);
-}
-
-/* FEATURED CARD */
-.featured-grid { display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px; }
-.featured-card {
-  background: var(--white);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-lg);
-  padding: 16px;
-  display: flex; gap: 14px; align-items: flex-start;
-  box-shadow: var(--shadow-sm);
-  transition: all var(--transition);
-  position: relative; overflow: hidden; cursor: pointer;
-}
-.featured-card::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--rope); }
-.featured-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border-strong); }
-.featured-tag {
-  position: absolute; top: 10px; right: 10px;
-  font-size: 0.62rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px;
-  background: var(--rope-pale); color: var(--leather-dark);
-  padding: 2px 8px; border-radius: 10px; border: 1px solid var(--border);
-}
-.featured-art { width: 72px; height: 72px; border-radius: 8px; object-fit: cover; flex-shrink: 0; background: var(--sand); }
-.featured-art-emoji { width: 72px; height: 72px; border-radius: 8px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0; }
-.featured-body { flex: 1; min-width: 0; }
-.featured-title { font-size: 1rem; font-weight: 700; color: var(--ink); margin-bottom: 2px; padding-right: 60px; }
-.featured-host { font-size: 0.78rem; color: var(--leather); font-weight: 600; margin-bottom: 6px; }
-.featured-desc { font-size: 0.78rem; color: var(--ink-muted); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; }
-.card-links { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; }
-.card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; text-decoration: none; transition: var(--transition); border: 1px solid transparent; }
-.link-yt { background: #fff0f0; color: #c0392b; border-color: #f5c6c6; }
-.link-yt:hover { background: #ffe0e0; }
-.link-web { background: var(--rope-pale); color: var(--leather-dark); border-color: var(--border); }
-.link-web:hover { background: var(--sand-dark); }
-
-/* YEAR & CAT BADGES */
-.year-badge { display: inline-flex; align-items: center; font-size: 0.7rem; font-weight: 800; padding: 2px 8px; border-radius: 4px; margin-right: 5px; background: var(--leather-deeper); color: var(--cream); letter-spacing: 0.3px; }
-.cat-badge { display: inline-flex; align-items: center; font-size: 0.62rem; font-weight: 600; padding: 2px 7px; border-radius: 4px; background: var(--sand-dark); color: var(--ink-soft); }
-
-/* GRID */
-.video-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 28px; }
-@media (max-width: 600px) { .video-grid { grid-template-columns: 1fr; } }
-.pod-card { background: var(--white); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px; display: flex; flex-direction: column; gap: 8px; box-shadow: var(--shadow-sm); transition: all var(--transition); cursor: pointer; }
-.pod-card:hover { box-shadow: var(--shadow-md); transform: translateY(-1px); border-color: var(--border-strong); }
-.pod-card-top { display: flex; gap: 10px; align-items: flex-start; }
-.pod-art { width: 52px; height: 52px; border-radius: 7px; object-fit: cover; flex-shrink: 0; background: var(--sand); }
-.pod-art-emoji { width: 52px; height: 52px; border-radius: 7px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 1.6rem; flex-shrink: 0; }
-.pod-info { flex: 1; min-width: 0; }
-.pod-title { font-size: 0.88rem; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 2px; }
-.pod-host { font-size: 0.72rem; color: var(--leather); font-weight: 600; }
-.pod-desc { font-size: 0.75rem; color: var(--ink-muted); line-height: 1.45; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.pod-footer { display: flex; gap: 5px; flex-wrap: wrap; }
-
-/* NO RESULTS */
-#noResults { display: none; text-align: center; padding: 60px 20px; color: var(--ink-muted); grid-column: 1/-1; }
-#noResults .no-icon { font-size: 2.5rem; margin-bottom: 10px; }
-
-/* DETAIL OVERLAY */
-.overlay { display: none; position: fixed; inset: 0; background: rgba(44,24,16,0.7); z-index: 500; align-items: flex-end; justify-content: center; }
-.overlay.open { display: flex; }
-@media (min-width: 600px) { .overlay { align-items: center; } }
-.detail-sheet { background: var(--cream); border: 1px solid var(--border); border-radius: 16px 16px 0 0; width: 100%; max-width: 680px; max-height: 90vh; overflow-y: auto; padding: 0 0 32px; position: relative; animation: slideUp 0.25s ease; }
-@media (min-width: 600px) { .detail-sheet { border-radius: 16px; } }
-@keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-.detail-close { position: absolute; top: 10px; right: 10px; background: rgba(0,0,0,0.5); border: none; color: white; font-size: 1.2rem; width: 32px; height: 32px; border-radius: 50%; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; }
-.detail-video { position: relative; width: 100%; aspect-ratio: 16/9; background: #000; border-radius: 16px 16px 0 0; overflow: hidden; }
-.detail-video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: none; }
-.detail-art { width: 90px; height: 90px; border-radius: 10px; object-fit: cover; margin-bottom: 14px; background: var(--sand); }
-.detail-art-emoji { width: 90px; height: 90px; border-radius: 10px; background: var(--sand-dark); display: flex; align-items: center; justify-content: center; font-size: 2.8rem; margin-bottom: 14px; }
-.detail-title { font-size: 1.15rem; font-weight: 800; color: var(--ink); margin-bottom: 4px; padding: 16px 20px 0; }
-.detail-host { font-size: 0.88rem; color: var(--leather); font-weight: 600; margin-bottom: 10px; padding: 0 20px; }
-.detail-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; padding: 0 20px; }
-.detail-desc { font-size: 0.88rem; color: var(--ink-muted); line-height: 1.6; padding: 0 20px; }
-
-/* SUBMIT MODAL */
-.modal-overlay { display: none; position: fixed; inset: 0; background: rgba(44,24,16,0.7); z-index: 600; align-items: center; justify-content: center; padding: 20px; }
-.modal-overlay.open { display: flex; }
-.modal-box { background: var(--cream); border: 1px solid var(--border); border-radius: 14px; padding: 24px 20px; width: 100%; max-width: 480px; max-height: 90vh; overflow-y: auto; }
-.modal-title { font-size: 1.2rem; font-weight: 800; color: var(--ink); margin-bottom: 6px; }
-.modal-sub { font-size: 0.82rem; color: var(--ink-muted); margin-bottom: 18px; }
-.form-row { margin-bottom: 14px; }
-.form-row label { display: block; font-size: 0.78rem; font-weight: 600; color: var(--leather); margin-bottom: 5px; text-transform: uppercase; letter-spacing: 0.5px; }
-.form-row input, .form-row select, .form-row textarea { width: 100%; background: var(--white); border: 1px solid #ddd; border-radius: 7px; padding: 9px 12px; color: var(--ink); font-family: 'Outfit', sans-serif; font-size: 0.88rem; }
-.form-row textarea { height: 80px; resize: vertical; }
-.form-row input:focus, .form-row select:focus, .form-row textarea:focus { outline: none; border-color: var(--rope); }
-.modal-footer { display: flex; gap: 10px; margin-top: 18px; }
-.btn-cancel { flex: 1; background: var(--sand); border: 1px solid var(--border); color: var(--ink-muted); font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 600; padding: 10px; border-radius: 8px; cursor: pointer; }
-.btn-submit { flex: 2; background: var(--leather); border: none; color: var(--cream); font-family: 'Outfit', sans-serif; font-size: 0.88rem; font-weight: 700; padding: 10px; border-radius: 8px; cursor: pointer; }
-.btn-submit:hover { background: var(--leather-dark); }
-
-/* FOOTER */
-footer { background: linear-gradient(135deg, var(--leather-deeper) 0%, var(--leather-dark) 100%); border-top: 1px solid var(--border); padding: 24px 20px; text-align: center; font-size: 0.78rem; color: rgba(255,251,245,0.6); line-height: 1.8; }
-footer a { color: var(--rope-light); text-decoration: none; }
-footer a:hover { color: var(--cream); }
-
-@media (max-width: 600px) {
-  .hero h1 { font-size: 1.75rem; }
-  .topbar-sub { display: none; }
-  .hero-stats { gap: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; }
-  .hero-stat { padding: 8px 6px; }
-  .stat-num { font-size: 1.25rem; }
-}
+.sponsor-bar { background: var(--leather-deeper); padding: 6px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,251,245,0.6); font-weight: 500; }
+.sponsor-bar a { color: var(--rope-light); text-decoration: none; font-weight: 700; }
+.sponsor-bar-right { font-weight: 700; color: rgba(255,251,245,0.5); letter-spacing: 1px; font-size: 0.68rem; }
+.site-header { background: var(--leather-deeper); text-align: center; padding: 18px 16px 14px; border-bottom: 3px solid var(--rope); }
+.site-title { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 900; color: var(--cream); letter-spacing: -0.5px; line-height: 1; }
+.site-title span { color: var(--rope-light); }
+.site-tagline { font-size: 0.82rem; color: rgba(255,251,245,0.6); margin-top: 4px; font-weight: 400; }
+.stats-bar { background: var(--leather-dark); display: flex; justify-content: center; gap: 48px; padding: 10px 16px; }
+.stat-item { text-align: center; }
+.stat-num { font-size: 1.3rem; font-weight: 800; color: var(--rope-light); line-height: 1; }
+.stat-lbl { font-size: 0.62rem; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,251,245,0.5); margin-top: 2px; font-weight: 600; }
+.controls { background: var(--cream); border-bottom: 1px solid var(--border); padding: 10px 0 0; position: sticky; top: 0; z-index: 100; box-shadow: var(--shadow-sm); }
+.search-wrap { padding: 0 12px 8px; }
+.search-wrap input { width: 100%; background: var(--sand); border: 1px solid var(--border-strong); border-radius: 8px; padding: 9px 14px; font-family: 'Outfit', sans-serif; font-size: 0.9rem; color: var(--ink); outline: none; }
+.search-wrap input:focus { border-color: var(--rope); }
+.chip-scroll { display: flex; gap: 6px; padding: 0 12px 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.chip-scroll::-webkit-scrollbar { display: none; }
+.trainer-scroll { display: flex; gap: 6px; padding: 0 12px 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; border-top: 1px solid var(--border); padding-top: 8px; }
+.trainer-scroll::-webkit-scrollbar { display: none; }
+.chip { flex-shrink: 0; background: var(--sand); border: 1px solid var(--border-strong); color: var(--ink-soft); padding: 6px 13px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Outfit', sans-serif; white-space: nowrap; }
+.chip:hover { background: var(--sand-dark); }
+.chip.active { background: var(--leather-deeper); color: var(--cream); border-color: var(--leather-deeper); }
+.trainer-pages-bar { background: var(--sand-dark); border-bottom: 1px solid var(--border); padding: 7px 12px; display: flex; align-items: center; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
+.trainer-pages-bar::-webkit-scrollbar { display: none; }
+.trainer-pages-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); white-space: nowrap; }
+.trainer-page-link { flex-shrink: 0; font-size: 0.75rem; font-weight: 600; color: var(--leather-dark); text-decoration: none; background: var(--cream); border: 1px solid var(--border-strong); padding: 4px 11px; border-radius: 14px; transition: var(--transition); white-space: nowrap; }
+.trainer-page-link:hover { background: var(--leather-deeper); color: var(--cream); border-color: var(--leather-deeper); }
+.main { padding: 14px 12px; max-width: 1400px; margin: 0 auto; }
+.showing-count { font-size: 0.76rem; color: var(--ink-muted); margin-bottom: 8px; font-weight: 500; }
+.section-header { font-size: 0.76rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
+.video-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+@media (max-width: 1024px) { .video-grid { grid-template-columns: repeat(3,1fr); } }
+@media (max-width: 640px) { .video-grid { grid-template-columns: repeat(2,1fr); gap: 8px; } }
+.video-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow-sm); text-decoration: none; color: inherit; display: block; }
+.video-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.video-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #111; overflow: hidden; }
+.video-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.rank-badge { position: absolute; top: 6px; left: 6px; background: var(--leather-deeper); color: var(--rope-light); font-size: 0.7rem; font-weight: 800; padding: 3px 7px; border-radius: 4px; line-height: 1; }
+.year-badge { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.66rem; font-weight: 700; padding: 3px 6px; border-radius: 4px; line-height: 1; }
+.video-body { padding: 9px 10px; }
+.video-title { font-size: 0.83rem; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.video-host { font-size: 0.73rem; color: var(--ink-muted); font-weight: 500; margin-bottom: 5px; }
+.video-footer { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+.cat-badge { font-size: 0.63rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; background: var(--rope-pale); color: var(--leather-dark); white-space: nowrap; }
+@media (max-width: 640px) { .video-body { padding: 7px; } .video-title { font-size: 0.76rem; } .video-host { font-size: 0.67rem; } }
+.no-results { grid-column: 1/-1; text-align: center; padding: 48px 20px; color: var(--ink-muted); font-size: 0.95rem; }
+footer { background: var(--leather-deeper); color: rgba(255,251,245,0.6); text-align: center; padding: 24px 16px; font-size: 0.82rem; margin-top: 32px; }
+footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
+@media (prefers-reduced-motion: reduce) { *,*::before,*::after { transition-duration: .01ms !important; } }
 </style>
 </head>
 <body>
 
-<header class="topbar">
-  <div>
-    <div class="topbar-brand">Reining<span>Horse</span>Videos</div>
-    <div class="topbar-sub">Reining Horse Video Directory</div>
-  </div>
-  <div>
-    <button class="submit-btn" onclick="openSubmit()">+ Submit</button>
-  </div>
+<div class="sponsor-bar">
+  <div>SPONSORED BY <a href="https://www.bridleandbit.com" target="_blank">BRIDLE &amp; BIT</a> MAGAZINE</div>
+  <div class="sponsor-bar-right">REININGHORSEVIDEOS.COM</div>
+</div>
+
+<header class="site-header">
+  <div class="site-title">Reining Horse <span>Videos</span></div>
+  <div class="site-tagline">The Best Reining Videos on YouTube — Ranked &amp; Curated</div>
 </header>
 
-<div class="hero">
-  <div class="hero-site-title">Reining Horse Media Hub</div>
-  <h1>The Best Reining Horse <span>Videos</span></h1>
-  <p>Futurity runs, Derby championships, Run for a Million showdowns, 100X, European futurities, top trainers, and signature horses — all in one place.</p>
-  <div id="heroBanner" onclick="window.open(bannerAds[currentBanner].url,'_blank')">
-    <img id="bannerImg" src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public" alt="Sponsor" loading="lazy" width="320" height="100">
-  </div>
-  <script>
-  var bannerAds=[
-    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-black-angus/public",url:"https://www.blackangus.com",alt:"Black Angus Steakhouse"},
-    {img:"https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/podcastcorral-k4-gourmet-beef/public",url:"https://www.k4ranch.com",alt:"K4 Gourmet Beef"},
-  ];
-  var currentBanner=0;
-  function rotateBanner(){currentBanner=(currentBanner+1)%bannerAds.length;var i=document.getElementById('bannerImg');if(i){i.src=bannerAds[currentBanner].img;i.alt=bannerAds[currentBanner].alt;}}
-  setInterval(rotateBanner,5000);
-  </script>
-  <div class="hero-stats">
-    <div class="hero-stat"><div class="stat-num" id="stat-total">0</div><div class="stat-label">Videos</div></div>
-    <div class="hero-stat"><div class="stat-num" id="stat-trainers">11</div><div class="stat-label">Featured Trainers</div></div>
-    <div class="hero-stat"><div class="stat-num" id="stat-cats">12</div><div class="stat-label">Categories</div></div>
-  </div>
+<div class="stats-bar">
+  <div class="stat-item"><div class="stat-num" id="stat-total">0</div><div class="stat-lbl">Top Videos</div></div>
+  <div class="stat-item"><div class="stat-num">12</div><div class="stat-lbl">Categories</div></div>
+  <div class="stat-item"><div class="stat-num">2026</div><div class="stat-lbl">Updated</div></div>
 </div>
 
 <div class="controls">
   <div class="search-wrap">
-    <span class="search-icon">🔍</span>
-    <input type="text" id="searchInput" placeholder="Search videos, trainers, horses, events..." oninput="renderAll()" autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Search by trainer, horse, event..." oninput="renderAll()" autocomplete="off">
   </div>
-  <div class="chip-label">Show Only</div>
-  <div class="chip-row" id="typeChips">
-    <button class="chip active" data-type="all" onclick="setType(this,'all')">All Videos</button>
-    <button class="chip" data-type="featured" onclick="setType(this,'featured')">⭐ Featured</button>
+  <div class="chip-scroll" id="catChips">
+    <button class="chip active" data-cat="all" onclick="setCat(this,'all')">All Videos</button>
+    <button class="chip" data-cat="nrha-futurity" onclick="setCat(this,'nrha-futurity')">🏆 NRHA Futurity</button>
+    <button class="chip" data-cat="nrha-derby" onclick="setCat(this,'nrha-derby')">🏇 NRHA Derby</button>
+    <button class="chip" data-cat="rfam" onclick="setCat(this,'rfam')">💰 Run for a Million</button>
+    <button class="chip" data-cat="100x" onclick="setCat(this,'100x')">⚡ 100X</button>
+    <button class="chip" data-cat="euro-futurity" onclick="setCat(this,'euro-futurity')">🇪🇺 European Futurities</button>
+    <button class="chip" data-cat="euro-derby" onclick="setCat(this,'euro-derby')">🇪🇺 European Derbies</button>
+    <button class="chip" data-cat="other-events" onclick="setCat(this,'other-events')">🎪 Other Events</button>
+    <button class="chip" data-cat="training" onclick="setCat(this,'training')">🎯 Training</button>
+    <button class="chip" data-cat="young-horse" onclick="setCat(this,'young-horse')">🐴 Young Horse</button>
+    <button class="chip" data-cat="legends" onclick="setCat(this,'legends')">⭐ Legends</button>
+    <button class="chip" data-cat="lifestyle" onclick="setCat(this,'lifestyle')">🤠 Lifestyle</button>
+    <button class="chip" data-cat="industry" onclick="setCat(this,'industry')">📊 Industry</button>
   </div>
-  <div class="chip-label" style="margin-top:8px;">Category</div>
-  <div class="chip-row" id="catChips">
-    <button class="chip active" data-cat="all" onclick="setCat(this,'all')">All</button>
-    <button class="chip" data-cat="nrha-futurity" onclick="setCat(this,'nrha-futurity')">NRHA Futurity</button>
-    <button class="chip" data-cat="nrha-derby" onclick="setCat(this,'nrha-derby')">NRHA Derby</button>
-    <button class="chip" data-cat="rfam" onclick="setCat(this,'rfam')">The Run for a Million</button>
-    <button class="chip" data-cat="100x" onclick="setCat(this,'100x')">100X</button>
-    <button class="chip" data-cat="euro-futurity" onclick="setCat(this,'euro-futurity')">European Futurities</button>
-    <button class="chip" data-cat="euro-derby" onclick="setCat(this,'euro-derby')">European Derbies</button>
-    <button class="chip" data-cat="other-events" onclick="setCat(this,'other-events')">Other Events</button>
-    <button class="chip" data-cat="training" onclick="setCat(this,'training')">Training</button>
-    <button class="chip" data-cat="young-horse" onclick="setCat(this,'young-horse')">Young Horse</button>
-    <button class="chip" data-cat="legends" onclick="setCat(this,'legends')">Legends</button>
-    <button class="chip" data-cat="lifestyle" onclick="setCat(this,'lifestyle')">Lifestyle</button>
-    <button class="chip" data-cat="industry" onclick="setCat(this,'industry')">Industry</button>
-  </div>
-  <div class="chip-label" style="margin-top:8px;">Trainer</div>
-  <div class="chip-row" id="trainerChips">
+  <div class="trainer-scroll" id="trainerChips">
     <button class="chip active" data-trainer="all" onclick="setTrainer(this,'all')">All Trainers</button>
     <button class="chip" data-trainer="fappani" onclick="setTrainer(this,'fappani')">Andrea Fappani</button>
     <button class="chip" data-trainer="flarida" onclick="setTrainer(this,'flarida')">Shawn Flarida</button>
@@ -349,45 +130,31 @@ footer a:hover { color: var(--cream); }
     <button class="chip" data-trainer="stillo" onclick="setTrainer(this,'stillo')">Mirjam Stillo</button>
     <button class="chip" data-trainer="bertolani" onclick="setTrainer(this,'bertolani')">Franco Bertolani</button>
   </div>
-  <div id="showingCount">Showing all shows &amp; channels</div>
+</div>
+
+<div class="trainer-pages-bar">
+  <span class="trainer-pages-label">Trainer Pages:</span>
+  <a href="/trainers/casey-deary.html" class="trainer-page-link">Casey Deary</a>
+  <a href="/trainers/andrea-fappani.html" class="trainer-page-link">Andrea Fappani</a>
+  <a href="/trainers/cade-mccutcheon.html" class="trainer-page-link">Cade McCutcheon</a>
+  <a href="/trainers/shawn-flarida.html" class="trainer-page-link">Shawn Flarida</a>
+  <a href="/trainers/tom-mccutcheon.html" class="trainer-page-link">Tom McCutcheon</a>
+  <a href="/trainers/craig-schmersal.html" class="trainer-page-link">Craig Schmersal</a>
+  <a href="/trainers/jason-vanlandingham.html" class="trainer-page-link">Jason Vanlandingham</a>
+  <a href="/trainers/duane-latimer.html" class="trainer-page-link">Duane Latimer</a>
+  <a href="/trainers/todd-bergen.html" class="trainer-page-link">Todd Bergen</a>
+  <a href="/trainers/mirjam-stillo.html" class="trainer-page-link">Mirjam Stillo</a>
+  <a href="/trainers/franco-bertolani.html" class="trainer-page-link">Franco Bertolani</a>
 </div>
 
 <main class="main">
-  <div id="featuredLabel" class="section-label">⭐ Featured</div>
-  <div id="featuredGrid" class="featured-grid"></div>
-  <div id="regularLabel" class="section-label">All Shows &amp; Channels</div>
-  <div id="videoGrid" class="video-grid">
-    <div id="noResults"><div class="no-icon">🤠</div><div>No results found. Try a different search.</div></div>
-  </div>
+  <div class="showing-count" id="showingCount"></div>
+  <div class="section-header" id="gridLabel"></div>
+  <div class="video-grid" id="videoGrid"></div>
 </main>
 
-<div class="overlay" id="detailOverlay" onclick="closeDetail(event)">
-  <div class="detail-sheet" id="detailSheet">
-    <button class="detail-close" onclick="closeDetailBtn()">✕</button>
-    <div id="detailContent"></div>
-  </div>
-</div>
-
-<div class="modal-overlay" id="submitModal" onclick="closeSubmit(event)">
-  <div class="modal-box" onclick="event.stopPropagation()">
-    <div class="modal-title">Submit a Video</div>
-    <div class="modal-sub">Free listing — no pay-to-play, ever. Reviewed within 48 hours.</div>
-    <div class="form-row"><label>Video Title *</label><input type="text" id="f-name" placeholder="e.g. Casey Deary & Belissimo - 2025 NRHA Open Futurity Champion"></div>
-    <div class="form-row"><label>Rider / Host</label><input type="text" id="f-host" placeholder="Rider name or channel name"></div>
-    <div class="form-row"><label>Category</label><select id="f-cat"><option>NRHA Futurity</option><option>NRHA Derby</option><option>The Run for a Million</option><option>100X</option><option>European Futurities</option><option>European Derbies</option><option>Other Events</option><option>Training</option><option>Young Horse</option><option>Legends</option><option>Lifestyle</option><option>Industry</option></select></div>
-    <div class="form-row"><label>Trainer (if applicable)</label><select id="f-trainer"><option value="">Not specific to one trainer</option><option>Andrea Fappani</option><option>Shawn Flarida</option><option>Tom McCutcheon</option><option>Cade McCutcheon</option><option>Craig Schmersal</option><option>Casey Deary</option><option>Jason Vanlandingham</option><option>Duane Latimer</option><option>Todd Bergen</option><option>Mirjam Stillo</option><option>Franco Bertolani</option><option>Other</option></select></div>
-    <div class="form-row"><label>Video URL *</label><input type="url" id="f-yt" placeholder="YouTube, Facebook, or Instagram URL"></div>
-    <div class="form-row"><label>Website / Source URL</label><input type="url" id="f-other" placeholder="https://..."></div>
-    <div class="form-row"><label>Short Description</label><textarea id="f-desc" placeholder="What happens in the video?"></textarea></div>
-    <div class="modal-footer">
-      <button class="btn-cancel" onclick="closeSubmitBtn()">Cancel</button>
-      <button class="btn-submit" onclick="submitForm()">Submit →</button>
-    </div>
-  </div>
-</div>
-
 <footer>
-  <div style="font-size:1rem;font-weight:700;color:var(--rope);margin-bottom:6px;">ReiningHorseVideos.com</div>
+  <div style="font-size:1rem;font-weight:700;color:var(--rope-light);margin-bottom:6px;">ReiningHorseVideos.com</div>
   <div>The reining horse video directory — Futurity, Derby, RFAM &amp; top trainers.</div>
   <div style="margin-top:8px;">
     A <a href="https://www.bridleandbit.com" target="_blank">Bridle &amp; Bit Magazine</a> property &nbsp;·&nbsp;
@@ -399,89 +166,24 @@ footer a:hover { color: var(--cream); }
 <script>
 const SHOWS = [
   {
-    id:1, featured:true,
+    id:1,
     title:"2025 NRHA Open Futurity Champion — Belissimo & Casey Deary",
-    host:"Casey Deary",
-    horse:"Belissimo",
-    year:2025,
-    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🏆",
-    desc:"231.5 — 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship. Belissimo (Magnum Chic Dream x Americasnextgunmodel) owned by Arcese Quarter Horses USA. The winning run that pushed Casey Deary past $6 million in NRHA lifetime earnings.",
-    youtube:"https://www.youtube.com/watch?v=BBa9MKvimmc",
-    artwork:"https://img.youtube.com/vi/BBa9MKvimmc/hqdefault.jpg"
+    host:"Casey Deary", horse:"Belissimo", year:2025,
+    category:"nrha-futurity", catLabel:"NRHA Futurity", trainer:"deary",
+    desc:"231.5 — 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship. Belissimo (Magnum Chic Dream x Americasnextgunmodel) owned by Arcese Quarter Horses USA.",
+    youtube:"https://www.youtube.com/watch?v=BBa9MKvimmc"
   },
   {
-    id:2, featured:false,
+    id:2,
     title:"Trouble With the Spins When Teaching It? — Casey Deary",
-    host:"Casey Deary",
-    year:2025,
-    type:"video", category:"training", catLabel:"Training",
-    trainer:"deary", emoji:"🎬",
-    desc:"Casey Deary breaks down common problems when teaching the spin to a reining horse — technique, troubleshooting, and corrections from one of the sport's top professionals.",
-    youtube:"https://www.youtube.com/watch?v=9INMqBm_UNw",
-    artwork:"https://img.youtube.com/vi/9INMqBm_UNw/hqdefault.jpg"
+    host:"Casey Deary", year:2025,
+    category:"training", catLabel:"Training", trainer:"deary",
+    desc:"Casey Deary breaks down common problems when teaching the spin to a reining horse.",
+    youtube:"https://www.youtube.com/watch?v=9INMqBm_UNw"
   },
 ];
 
-let activeType='all', activeCat='all', activeTrainer='all';
-
-function setType(el,type){ activeType=type; document.querySelectorAll('#typeChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
-function setCat(el,cat){ activeCat=cat; document.querySelectorAll('#catChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
-function setTrainer(el,trainer){ activeTrainer=trainer; document.querySelectorAll('#trainerChips .chip').forEach(c=>c.classList.remove('active')); el.classList.add('active'); renderAll(); }
-
-function matchesShow(s){
-  const q=document.getElementById('searchInput').value.toLowerCase().trim();
-  const typeOk=activeType==='all'||(activeType==='featured'&&s.featured);
-  const catOk=activeCat==='all'||s.category===activeCat;
-  const trainerOk=activeTrainer==='all'||s.trainer===activeTrainer;
-  const searchOk=!q||s.title.toLowerCase().includes(q)||(s.host&&s.host.toLowerCase().includes(q))||(s.desc&&s.desc.toLowerCase().includes(q))||s.catLabel.toLowerCase().includes(q)||(s.horse&&s.horse.toLowerCase().includes(q));
-  return typeOk&&catOk&&trainerOk&&searchOk;
-}
-
-function yearBadge(s){
-  return s.year?`<span class="year-badge">${s.year}</span>`:'';
-}
-
-function cardLinks(s){
-  let h='';
-  if(s.youtube) h+=`<a class="card-link link-yt" href="${s.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`;
-  if(s.website) h+=`<a class="card-link link-web" href="${s.website}" target="_blank" rel="noopener">🌐 Website</a>`;
-  return h;
-}
-
-function featuredCardHTML(s){
-  const art=s.artwork?`<img class="featured-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="featured-art-emoji">${s.emoji||'🎬'}</div>`;
-  const horseLine=s.horse?`<div class="featured-host">aboard ${s.horse}${s.host?' · '+s.host:''}</div>`:(s.host?`<div class="featured-host">${s.host}</div>`:'');
-  return `<div class="featured-card" onclick="openDetail(${s.id})"><span class="featured-tag">⭐ Featured</span>${art}<div class="featured-body"><div class="featured-title">${s.title}</div>${horseLine}<div class="featured-desc">${s.desc}</div><div class="card-links">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span>${cardLinks(s)}</div></div></div>`;
-}
-
-function podCardHTML(s){
-  const art=s.artwork?`<img class="pod-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="pod-art-emoji">${s.emoji||'🎬'}</div>`;
-  const horseLine=s.horse?`<div class="pod-host">aboard ${s.horse}${s.host?' · '+s.host:''}</div>`:(s.host?`<div class="pod-host">${s.host}</div>`:'');
-  return `<div class="pod-card" onclick="openDetail(${s.id})"><div class="pod-card-top">${art}<div class="pod-info"><div class="pod-title">${s.title}</div>${horseLine}</div></div><div class="pod-desc">${s.desc}</div><div class="pod-footer">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span></div></div>`;
-}
-
-function renderAll(){
-  const matching=SHOWS.filter(matchesShow);
-  const featured=matching.filter(s=>s.featured);
-  const regular=matching.filter(s=>!s.featured);
-  const fGrid=document.getElementById('featuredGrid');
-  const pGrid=document.getElementById('videoGrid');
-  const fLabel=document.getElementById('featuredLabel');
-  const rLabel=document.getElementById('regularLabel');
-  const noRes=document.getElementById('noResults');
-  const count=document.getElementById('showingCount');
-  fLabel.style.display=featured.length?'':'none';
-  fGrid.style.display=featured.length?'':'none';
-  fGrid.innerHTML=featured.map(featuredCardHTML).join('');
-  if(regular.length){noRes.style.display='none';pGrid.innerHTML=regular.map(podCardHTML).join('');}
-  else{pGrid.innerHTML='';noRes.style.display='block';pGrid.appendChild(noRes);}
-  rLabel.style.display=matching.length?'':'none';
-  const total=matching.length;
-  if(SHOWS.length===0){count.textContent='Directory launching soon — videos being added';}
-  else{count.textContent=total===SHOWS.length?`Showing all ${total} videos`:`Showing ${total} of ${SHOWS.length} videos`;}
-  document.getElementById('stat-total').textContent=SHOWS.length;
-}
+let activeCat='all', activeTrainer='all';
 
 function getYouTubeId(url){
   if(!url) return null;
@@ -489,35 +191,58 @@ function getYouTubeId(url){
   return m?m[1]:null;
 }
 
-function openDetail(id){
-  const s=SHOWS.find(x=>x.id===id);
-  if(!s) return;
+function setCat(el,cat){
+  activeCat=cat;
+  document.querySelectorAll('#catChips .chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  renderAll();
+}
+
+function setTrainer(el,trainer){
+  activeTrainer=trainer;
+  document.querySelectorAll('#trainerChips .chip').forEach(c=>c.classList.remove('active'));
+  el.classList.add('active');
+  renderAll();
+}
+
+function matchesShow(s){
+  const q=document.getElementById('searchInput').value.toLowerCase().trim();
+  const catOk=activeCat==='all'||s.category===activeCat;
+  const trainerOk=activeTrainer==='all'||s.trainer===activeTrainer;
+  const searchOk=!q||s.title.toLowerCase().includes(q)||(s.host&&s.host.toLowerCase().includes(q))||(s.horse&&s.horse.toLowerCase().includes(q))||(s.desc&&s.desc.toLowerCase().includes(q));
+  return catOk&&trainerOk&&searchOk;
+}
+
+function videoCardHTML(s,rank){
   const vid=getYouTubeId(s.youtube);
-  const embed=vid
-    ?`<div class="detail-video"><iframe src="https://www.youtube.com/embed/${vid}?autoplay=1&rel=0" frameborder="0" allowfullscreen allow="autoplay; encrypted-media"></iframe></div>`
-    :`<div class="detail-art-emoji">${s.emoji||'🎬'}</div>`;
-  const horseLine=s.horse?(s.host?s.host+' · aboard '+s.horse:'aboard '+s.horse):(s.host||'');
-  document.getElementById('detailContent').innerHTML=`${embed}<div class="detail-title">${s.title}</div><div class="detail-host">${horseLine}</div><div class="detail-badges">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span></div><div class="detail-desc">${s.desc}</div>`;
-  document.getElementById('detailOverlay').classList.add('open');
-  document.body.style.overflow='hidden';
+  const thumb=vid?`https://img.youtube.com/vi/${vid}/hqdefault.jpg`:'';
+  const thumbEl=thumb?`<img src="${thumb}" alt="${s.title}" loading="lazy">`:`<div style="background:#222;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#888;font-size:2rem;">🎬</div>`;
+  const horseEl=s.horse?` · ${s.horse}`:'';
+  return `<a class="video-card" href="${s.youtube}" target="_blank" rel="noopener">
+    <div class="video-thumb-wrap">${thumbEl}<span class="rank-badge">#${rank}</span>${s.year?`<span class="year-badge">${s.year}</span>`:''}</div>
+    <div class="video-body">
+      <div class="video-title">${s.title}</div>
+      <div class="video-host">${s.host||''}${horseEl}</div>
+      <div class="video-footer"><span class="cat-badge">${s.catLabel}</span></div>
+    </div>
+  </a>`;
 }
-function closeDetail(e){if(e.target===document.getElementById('detailOverlay'))closeDetailBtn();}
-function closeDetailBtn(){
-  document.getElementById('detailOverlay').classList.remove('open');
-  document.body.style.overflow='';
-  // Stop video by clearing iframe src
-  const iframe=document.querySelector('#detailContent iframe');
-  if(iframe) iframe.src='';
+
+function renderAll(){
+  const matching=SHOWS.filter(matchesShow);
+  const grid=document.getElementById('videoGrid');
+  const count=document.getElementById('showingCount');
+  const label=document.getElementById('gridLabel');
+  document.getElementById('stat-total').textContent=SHOWS.length;
+  if(matching.length===0){
+    grid.innerHTML='<div class="no-results">No videos found.</div>';
+    count.textContent=''; label.textContent=''; return;
+  }
+  label.textContent=`TOP ${matching.length} RANKED VIDEOS`;
+  count.textContent=matching.length===SHOWS.length?`Showing all ${SHOWS.length} videos`:`Showing ${matching.length} of ${SHOWS.length} videos`;
+  grid.innerHTML=matching.map((s,i)=>videoCardHTML(s,i+1)).join('');
 }
-function openSubmit(){document.getElementById('submitModal').classList.add('open');}
-function closeSubmit(e){if(e.target===document.getElementById('submitModal'))closeSubmitBtn();}
-function closeSubmitBtn(){document.getElementById('submitModal').classList.remove('open');}
-function submitForm(){
-  const name=document.getElementById('f-name').value.trim();
-  if(!name){alert('Please enter a show or channel name.');return;}
-  alert("Thanks for your submission! We'll review it within 48 hours and add it to the directory.");
-  closeSubmitBtn();
-}
+
 renderAll();
 </script>
 </body>
