@@ -351,6 +351,7 @@ footer a:hover { color: var(--cream); }
     <button class="chip" data-trainer="fappani" onclick="setTrainer(this,'fappani')">Andrea Fappani</button>
     <button class="chip" data-trainer="flarida" onclick="setTrainer(this,'flarida')">Shawn Flarida</button>
     <button class="chip" data-trainer="mccutcheon" onclick="setTrainer(this,'mccutcheon')">Tom McCutcheon</button>
+    <button class="chip" data-trainer="cade-mccutcheon" onclick="setTrainer(this,'cade-mccutcheon')">Cade McCutcheon</button>
     <button class="chip" data-trainer="schmersal" onclick="setTrainer(this,'schmersal')">Craig Schmersal</button>
     <button class="chip" data-trainer="deary" onclick="setTrainer(this,'deary')">Casey Deary</button>
     <button class="chip" data-trainer="vanlandingham" onclick="setTrainer(this,'vanlandingham')">Jason Vanlandingham</button>
@@ -386,7 +387,7 @@ footer a:hover { color: var(--cream); }
     <div class="form-row"><label>Host / Creator</label><input type="text" id="f-host" placeholder="Your name or channel name"></div>
     <div class="form-row"><label>Media Type *</label><select id="f-type"><option value="">Select type...</option><option>🎬 Video Channel</option><option>🎙️ Audio Podcast</option><option>📹 Video Podcast</option></select></div>
     <div class="form-row"><label>Category</label><select id="f-cat"><option>NRHA Futurity</option><option>NRHA Derby</option><option>The Run for a Million</option><option>100X</option><option>European Futurities</option><option>European Derbies</option><option>Other Events</option><option>Training</option><option>Young Horse</option><option>Legends</option><option>Lifestyle</option><option>Industry</option></select></div>
-    <div class="form-row"><label>Trainer (if applicable)</label><select id="f-trainer"><option value="">Not specific to one trainer</option><option>Andrea Fappani</option><option>Shawn Flarida</option><option>Tom McCutcheon</option><option>Craig Schmersal</option><option>Casey Deary</option><option>Jason Vanlandingham</option><option>Duane Latimer</option><option>Todd Bergen</option><option>Mirjam Stillo</option><option>Franco Bertolani</option><option>Other</option></select></div>
+    <div class="form-row"><label>Trainer (if applicable)</label><select id="f-trainer"><option value="">Not specific to one trainer</option><option>Andrea Fappani</option><option>Shawn Flarida</option><option>Tom McCutcheon</option><option>Cade McCutcheon</option><option>Craig Schmersal</option><option>Casey Deary</option><option>Jason Vanlandingham</option><option>Duane Latimer</option><option>Todd Bergen</option><option>Mirjam Stillo</option><option>Franco Bertolani</option><option>Other</option></select></div>
     <div class="form-row"><label>YouTube URL</label><input type="url" id="f-yt" placeholder="https://youtube.com/..."></div>
     <div class="form-row"><label>Spotify / Apple / Website URL</label><input type="url" id="f-other" placeholder="https://..."></div>
     <div class="form-row"><label>Short Description</label><textarea id="f-desc" placeholder="What is this show or channel about?"></textarea></div>
@@ -417,6 +418,24 @@ const SHOWS = [
     trainer:"deary", emoji:"🎬",
     desc:"NRHA $6 Million Dollar Rider. 4x NRHA Open Futurity Champion (2012, 2015, 2021, 2025). NRHA Open Derby Champion 2025. 3x The American Performance Horseman Champion. National Reining Breeders Classic Champion 2020. Ranked #4 on NRHA Leading Lifetime Riders. A Run for a Million qualifier every year since its 2019 inception, featured on Taylor Sheridan's The Last Cowboy. Endless public footage across NRHA, RFAM, and Quarter Horse News coverage — Futurity runs, Derby wins, and signature horses including Americasnextgunmodel, Shesouttayourleague, Ten Thirty, Maverick, Down Right Amazing, and Belissimo.",
     website:"https://dearyperformance.com"
+  },
+  {
+    id:2, featured:true,
+    title:"Andrea Fappani",
+    host:"Andrea Fappani",
+    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
+    trainer:"fappani", emoji:"🎬",
+    desc:"NRHA's first and only $10 Million Dollar Rider (2025) and All-Time Leading Rider. NRHA Hall of Fame inductee 2024. 4x NRHA Open Futurity Champion — RR Star (2001), Lil Joe Cash (2011), Spooky Whiz (2016), All Bettss Are Off (2020). NRHA European Futurity Champion. 4x National Reining Breeders Classic Open Champion. 2022 Run for a Million Reserve Champion aboard Trash Talkin Spook. Youngest NRHA Million Dollar Rider in history (2006). Originally from Bergamo, Italy — trained under Todd Bergen before launching his own program at Fappani Performance Horses in Scottsdale, AZ. In 2023 expanded into NRCHA cow horse competition, taking the Snaffle Bit Futurity Limited Open Championship. Endless public footage across NRHA, RFAM, 100X Reining Classic, American Performance Horseman, and Quarter Horse News coverage.",
+    website:"https://fappaniperformance.com"
+  },
+  {
+    id:3, featured:true,
+    title:"Cade McCutcheon",
+    host:"Cade McCutcheon",
+    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
+    trainer:"cade-mccutcheon", emoji:"🎬",
+    desc:"NRHA $3 Million Dollar Rider (2025) — youngest rider to reach the $1M, $2M, and $3M milestones. 2019 NRHA Open Futurity Champion on Super Marioo at age 19 — the youngest Open Futurity Champion in NRHA history. 2019 Run for a Million Invitational Co-Champion. 2024 NRHA Derby Champion on All Nite Partier. Youngest U.S. athlete ever named to the Reining Squad for the 2018 World Equestrian Games. Third generation of a reining dynasty: son of NRHA $2M Rider Tom McCutcheon and NRHA $3M Non-Pro/Hall of Famer Mandy McCutcheon; grandson of NRHA $3M Rider/Hall of Famer Tim McQuay and Hall of Famer Colleen McQuay. Based at Tom McCutcheon Reining Horses in Aubrey, TX. Extensive public footage across NRHA Futurity/Derby broadcasts, Run for a Million, and The American Performance Horseman.",
+    website:"https://tmreining.com"
   },
 ];
 
