@@ -99,7 +99,7 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
 
 <div class="controls">
   <div class="search-wrap">
-    <input type="text" id="searchInput" placeholder="Search by trainer, horse, event..." oninput="renderAll()" autocomplete="off">
+    <input type="text" id="searchInput" placeholder="Search by trainer, horse, channel, event..." oninput="renderAll()" autocomplete="off">
   </div>
   <div class="chip-scroll" id="catChips">
     <button class="chip active" data-cat="all" onclick="setCat(this,'all')">All Videos</button>
@@ -125,6 +125,7 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
     <button class="chip" data-trainer="schmersal" onclick="setTrainer(this,'schmersal')">Craig Schmersal</button>
     <button class="chip" data-trainer="deary" onclick="setTrainer(this,'deary')">Casey Deary</button>
     <button class="chip" data-trainer="vanlandingham" onclick="setTrainer(this,'vanlandingham')">Jason Vanlandingham</button>
+    <button class="chip" data-trainer="mills" onclick="setTrainer(this,'mills')">Matt Mills</button>
     <button class="chip" data-trainer="latimer" onclick="setTrainer(this,'latimer')">Duane Latimer</button>
     <button class="chip" data-trainer="bergen" onclick="setTrainer(this,'bergen')">Todd Bergen</button>
     <button class="chip" data-trainer="stillo" onclick="setTrainer(this,'stillo')">Mirjam Stillo</button>
@@ -141,6 +142,7 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
   <a href="/trainers/tom-mccutcheon.html" class="trainer-page-link">Tom McCutcheon</a>
   <a href="/trainers/craig-schmersal.html" class="trainer-page-link">Craig Schmersal</a>
   <a href="/trainers/jason-vanlandingham.html" class="trainer-page-link">Jason Vanlandingham</a>
+  <a href="/trainers/matt-mills.html" class="trainer-page-link">Matt Mills</a>
   <a href="/trainers/duane-latimer.html" class="trainer-page-link">Duane Latimer</a>
   <a href="/trainers/todd-bergen.html" class="trainer-page-link">Todd Bergen</a>
   <a href="/trainers/mirjam-stillo.html" class="trainer-page-link">Mirjam Stillo</a>
@@ -165,21 +167,74 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
 
 <script>
 const SHOWS = [
+  // ─── NRHA OFFICIAL ───
   {
     id:1,
-    title:"2025 NRHA Open Futurity Champion — Belissimo & Casey Deary",
-    host:"Casey Deary", horse:"Belissimo", year:2025,
-    category:"nrha-futurity", catLabel:"NRHA Futurity", trainer:"deary",
-    desc:"231.5 — 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship. Belissimo (Magnum Chic Dream x Americasnextgunmodel) owned by Arcese Quarter Horses USA.",
-    youtube:"https://www.youtube.com/watch?v=BBa9MKvimmc"
+    title:"NRHA — Official Channel",
+    host:"National Reining Horse Association",
+    year:2026,
+    category:"nrha-futurity", catLabel:"NRHA Futurity",
+    desc:"The official NRHA YouTube channel. Futurity finals, Derby champions, Run for a Million footage, NRBC highlights, pattern breakdowns, and 60 years of reining history. The #1 source for live and archived NRHA competition video.",
+    youtube:"https://www.youtube.com/@nrha",
+    artwork:"https://yt3.googleusercontent.com/ytc/AIdro_n4eG2DwXVCbKAzeMJnHPYGOz3NRHA=s176-c-k-c0x00ffffff-no-rj"
   },
+  // ─── MATT MILLS ───
   {
     id:2,
+    title:"Matt Mills Reining",
+    host:"Matt Mills",
+    year:2026,
+    category:"training", catLabel:"Training",
+    trainer:"mills",
+    desc:"32.5K subscribers. WEG Gold Medalist and NRHA Million Dollar Rider Matt Mills delivers weekly training tips, competition footage, futurity prep, and behind-the-scenes ranch life at Ruckman Ranch. One of reining's most popular and educational YouTube channels.",
+    youtube:"https://www.youtube.com/@MattMillsReining",
+    artwork:""
+  },
+  // ─── CASEY DEARY ───
+  {
+    id:3,
+    title:"2025 NRHA Open Futurity Champion — Belissimo & Casey Deary",
+    host:"Casey Deary",
+    horse:"Belissimo",
+    year:2025,
+    category:"nrha-futurity", catLabel:"NRHA Futurity",
+    trainer:"deary",
+    desc:"231.5 — 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship. Belissimo (Magnum Chic Dream x Americasnextgunmodel) owned by Arcese Quarter Horses USA. The run that pushed Casey Deary past $6 million in NRHA lifetime earnings.",
+    youtube:"https://www.youtube.com/watch?v=BBa9MKvimmc",
+    artwork:"https://img.youtube.com/vi/BBa9MKvimmc/hqdefault.jpg"
+  },
+  {
+    id:4,
     title:"Trouble With the Spins When Teaching It? — Casey Deary",
-    host:"Casey Deary", year:2025,
-    category:"training", catLabel:"Training", trainer:"deary",
-    desc:"Casey Deary breaks down common problems when teaching the spin to a reining horse.",
-    youtube:"https://www.youtube.com/watch?v=9INMqBm_UNw"
+    host:"Casey Deary",
+    year:2025,
+    category:"training", catLabel:"Training",
+    trainer:"deary",
+    desc:"Casey Deary breaks down common problems when teaching the spin to a reining horse — technique, troubleshooting, and corrections from one of the sport's top professionals.",
+    youtube:"https://www.youtube.com/watch?v=9INMqBm_UNw",
+    artwork:"https://img.youtube.com/vi/9INMqBm_UNw/hqdefault.jpg"
+  },
+  // ─── FEI REINING ───
+  {
+    id:5,
+    title:"FEI — Reining Videos",
+    host:"Fédération Equestre Internationale",
+    year:2026,
+    category:"euro-futurity", catLabel:"European Futurities",
+    desc:"The FEI YouTube channel covers reining at the World Equestrian Games, FEI Reining World Cup, and international championships. European Futurity and Derby coverage including NRHA European Futurity highlights with riders like Fappani, Bertolani, and Stillo.",
+    youtube:"https://www.youtube.com/@feichannel",
+    artwork:""
+  },
+  // ─── HORSE & RIDER ───
+  {
+    id:6,
+    title:"Horse & Rider — Reining Training & Tips",
+    host:"Horse & Rider Magazine",
+    year:2026,
+    category:"training", catLabel:"Training",
+    desc:"The Horse & Rider YouTube channel features reining training videos with top professionals including Bud Lyon, Andrea Fappani, and Ryan Rushing. Pattern breakdowns, maneuver instruction, and competition coverage for riders at every level.",
+    youtube:"https://www.youtube.com/@TheHorseandRiderMag",
+    artwork:""
   },
 ];
 
@@ -189,6 +244,14 @@ function getYouTubeId(url){
   if(!url) return null;
   const m=url.match(/[?&]v=([^&]{11})/);
   return m?m[1]:null;
+}
+
+function getThumb(s){
+  if(s.artwork && s.artwork.includes('hqdefault')) return s.artwork;
+  const vid=getYouTubeId(s.youtube);
+  if(vid) return `https://img.youtube.com/vi/${vid}/hqdefault.jpg`;
+  // For channel URLs use artwork if set, else placeholder
+  return s.artwork||'';
 }
 
 function setCat(el,cat){
@@ -214,9 +277,10 @@ function matchesShow(s){
 }
 
 function videoCardHTML(s,rank){
-  const vid=getYouTubeId(s.youtube);
-  const thumb=vid?`https://img.youtube.com/vi/${vid}/hqdefault.jpg`:'';
-  const thumbEl=thumb?`<img src="${thumb}" alt="${s.title}" loading="lazy">`:`<div style="background:#222;width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:#888;font-size:2rem;">🎬</div>`;
+  const thumb=getThumb(s);
+  const thumbEl=thumb
+    ?`<img src="${thumb}" alt="${s.title}" loading="lazy">`
+    :`<div style="background:var(--leather-deeper);width:100%;height:100%;display:flex;align-items:center;justify-content:center;color:var(--rope-light);font-size:2.5rem;">▶</div>`;
   const horseEl=s.horse?` · ${s.horse}`:'';
   return `<a class="video-card" href="${s.youtube}" target="_blank" rel="noopener">
     <div class="video-thumb-wrap">${thumbEl}<span class="rank-badge">#${rank}</span>${s.year?`<span class="year-badge">${s.year}</span>`:''}</div>
