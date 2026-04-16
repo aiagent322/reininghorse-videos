@@ -201,10 +201,6 @@ body {
 .card-link { display: inline-flex; align-items: center; gap: 4px; font-size: 0.72rem; font-weight: 600; padding: 4px 10px; border-radius: 6px; text-decoration: none; transition: var(--transition); border: 1px solid transparent; }
 .link-yt { background: #fff0f0; color: #c0392b; border-color: #f5c6c6; }
 .link-yt:hover { background: #ffe0e0; }
-.link-fb { background: #eaf3ff; color: #1877F2; border-color: #c4d9f2; }
-.link-fb:hover { background: #d6e7fb; }
-.link-ig { background: #fdecf4; color: #c13584; border-color: #f2c3dc; }
-.link-ig:hover { background: #f9d7e7; }
 .link-web { background: var(--rope-pale); color: var(--leather-dark); border-color: var(--border); }
 .link-web:hover { background: var(--sand-dark); }
 
@@ -404,72 +400,7 @@ footer a:hover { color: var(--cream); }
 
 <script>
 const SHOWS = [
-  {
-    id:1, featured:true,
-    title:"Casey Deary &amp; Belissimo — 2025 NRHA Open Futurity Champion",
-    host:"Casey Deary",
-    horse:"Belissimo",
-    year:2025,
-    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🏆",
-    desc:"231.5 — the monster score that clinched the 2025 NRHA MS Diamonds TX Level 4 Open Futurity Championship and $350,000. Belissimo is a 2022 sorrel solid stallion by Magnum Chic Dream out of Americasnextgunmodel — the mare who carried Deary to his first Futurity title in 2012. The win pushed Deary past $6 million in lifetime NRHA earnings. Owned, bred, and nominated by Arcese Quarter Horses USA.",
-    facebook:"https://www.facebook.com/dearyperformancehorses/videos/834810882662182/"
-  },
-  {
-    id:2, featured:true,
-    title:"Casey Deary &amp; Ten Thirty — 2021 NRHA Open Futurity Champion",
-    host:"Casey Deary",
-    horse:"Ten Thirty",
-    year:2021,
-    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🏆",
-    desc:"Drawing first in the biggest show of the year, Deary and Ten Thirty marked a 223.5 that none of the other Level 4 Open finalists could match. Ten Thirty (Gunnatrashya x Dainty Little Step) was bought for $44,000 at the 2019 NRHA Markel Yearling Sale — the $350,000 first-place paycheck rocketed him past $369,000 in lifetime earnings. Owned by Rancho El Fortin of Coahuila, Mexico. Deary's third NRHA Open Futurity title.",
-    facebook:"https://www.facebook.com/QuarterHorseNews/videos/683742815930058/"
-  },
-  {
-    id:3, featured:true,
-    title:"Casey Deary &amp; Down Right Amazing — 2024 American Performance Horseman",
-    host:"Casey Deary",
-    horse:"Down Right Amazing",
-    year:2024,
-    type:"video", category:"other-events", catLabel:"Other Events",
-    trainer:"deary", emoji:"🏆",
-    desc:"226.5 to win The American Performance Horseman Reining — a $100,000 payday in Arlington, Texas. Down Right Amazing (Colonels Smoking Gun x Shesouttayourleague) is a son of Deary's 2015 Futurity mare, making this a second-generation win. The stallion also won the 2023 NRHA Derby, the 2023 NRBC, and the 2022 Run for a Million Open Shootout. Owned by DAG Ventures LLC.",
-    facebook:"https://www.facebook.com/dearyperformancehorses/videos/1031928248035080/"
-  },
-  {
-    id:4, featured:false,
-    title:"Casey Deary &amp; Down Right Amazing — 2020 NRHA Futurity",
-    host:"Casey Deary",
-    horse:"Down Right Amazing",
-    year:2020,
-    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🎬",
-    desc:"Third-place Futurity finish for Deary and Down Right Amazing — the run where Casey competed in a neck brace. Early glimpse of the stallion that would go on to win The American Performance Horseman, the 2022 Run for a Million Open Shootout, the 2023 NRHA Derby, and the 2023 NRBC.",
-    facebook:"https://www.facebook.com/dearyperformancehorses/videos/3662425774031966/"
-  },
-  {
-    id:5, featured:false,
-    title:"Casey Deary &amp; Down Right Amazing — 2022 NRBC Reserve Champion",
-    host:"Casey Deary",
-    horse:"Down Right Amazing",
-    year:2022,
-    type:"video", category:"other-events", catLabel:"Other Events",
-    trainer:"deary", emoji:"🥈",
-    desc:"National Reining Breeders Classic Level 4 Open Co-Reserve Champion. Another piece of the Down Right Amazing resume — a stallion whose name lived up to its billing across reining's biggest stages.",
-    facebook:"https://www.facebook.com/dearyperformancehorses/videos/660550581880212/"
-  },
-  {
-    id:6, featured:false,
-    title:"Casey Deary &amp; Maverickbuzthetower — NRHA Open Feature",
-    host:"Casey Deary",
-    horse:"Maverickbuzthetower",
-    year:2025,
-    type:"video", category:"nrha-futurity", catLabel:"NRHA Futurity",
-    trainer:"deary", emoji:"🎬",
-    desc:"Maverickbuzthetower — a 2022 sorrel overo APHA stallion by Americasnexttopgun — tied for 2025 NRHA Open Futurity Reserve Champion with Deary aboard, earning $130,000. Owned by Bosque Ranch Performance Horses LLC.",
-    instagram:"https://www.instagram.com/dearyperformancehorses/reel/DR5WMrfAY4s/"
-  },
+  // Videos added here as YouTube URLs are verified
 ];
 
 let activeType='all', activeCat='all', activeTrainer='all';
@@ -494,8 +425,6 @@ function yearBadge(s){
 function cardLinks(s){
   let h='';
   if(s.youtube) h+=`<a class="card-link link-yt" href="${s.youtube}" target="_blank" rel="noopener">▶ YouTube</a>`;
-  if(s.facebook) h+=`<a class="card-link link-fb" href="${s.facebook}" target="_blank" rel="noopener">▶ Facebook</a>`;
-  if(s.instagram) h+=`<a class="card-link link-ig" href="${s.instagram}" target="_blank" rel="noopener">▶ Instagram</a>`;
   if(s.website) h+=`<a class="card-link link-web" href="${s.website}" target="_blank" rel="noopener">🌐 Website</a>`;
   return h;
 }
@@ -540,8 +469,6 @@ function openDetail(id){
   const art=s.artwork?`<img class="detail-art" src="${s.artwork}" alt="${s.title}" loading="lazy">`:`<div class="detail-art-emoji">${s.emoji||'🎬'}</div>`;
   let links='';
   if(s.youtube) links+=`<a class="detail-link" href="${s.youtube}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on YouTube</a>`;
-  if(s.facebook) links+=`<a class="detail-link" href="${s.facebook}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on Facebook</a>`;
-  if(s.instagram) links+=`<a class="detail-link" href="${s.instagram}" target="_blank" rel="noopener"><span class="detail-link-icon">▶️</span> Watch on Instagram</a>`;
   if(s.website) links+=`<a class="detail-link" href="${s.website}" target="_blank" rel="noopener"><span class="detail-link-icon">🌐</span> Visit Website</a>`;
   document.getElementById('detailContent').innerHTML=`${art}<div class="detail-title">${s.title}</div><div class="detail-host">${s.host||''}${s.horse?(s.host?' · aboard ':'aboard ')+s.horse:''}</div><div class="detail-badges">${yearBadge(s)}<span class="cat-badge">${s.catLabel}</span></div><div class="detail-desc">${s.desc}</div><div class="detail-links">${links}</div>`;
   document.getElementById('detailOverlay').classList.add('open');
