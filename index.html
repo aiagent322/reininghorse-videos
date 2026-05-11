@@ -31,6 +31,8 @@ body { overflow-x: hidden; font-family: 'Outfit', -apple-system, sans-serif; bac
 .sponsor-bar { background: var(--leather-deeper); padding: 6px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,251,245,0.6); font-weight: 500; }
 .sponsor-bar a { color: var(--rope-light); text-decoration: none; font-weight: 700; }
 .sponsor-bar-right { font-weight: 700; color: rgba(255,251,245,0.5); letter-spacing: 1px; font-size: 0.68rem; }
+.bb-logo-link { display:flex; align-items:center; line-height:0; }
+@media(max-width:599px){ .bb-logo-link { display:none; } }
 .site-header { background: var(--leather-deeper); text-align: center; padding: 18px 16px 14px; border-bottom: 3px solid var(--rope); }
 .site-title { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 900; color: var(--cream); letter-spacing: -0.5px; line-height: 1; }
 .site-title span { color: var(--rope-light); }
@@ -83,7 +85,9 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
 
 <div class="sponsor-bar">
   <div>SPONSORED BY <a href="https://www.bridleandbit.com" target="_blank">BRIDLE &amp; BIT</a> MAGAZINE</div>
-  <div class="sponsor-bar-right">REININGHORSEVIDEOS.COM</div>
+  <a href="https://www.bridleandbit.com" target="_blank" rel="noopener noreferrer" class="bb-logo-link">
+    <img src="https://imagedelivery.net/9VlM7Y9GaQMXOu5Ypg50yA/bb-hp-0/public" alt="Bridle &amp; Bit Magazine" style="height:28px;width:auto;">
+  </a>
 </div>
 
 <header class="site-header">
