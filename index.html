@@ -49,13 +49,13 @@ body { overflow-x: hidden; font-family: 'Outfit', -apple-system, sans-serif; bac
 .chip-scroll::-webkit-scrollbar { display: none; }
 .trainer-scroll { display: flex; gap: 6px; padding: 0 12px 10px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; border-top: 1px solid var(--border); padding-top: 8px; }
 .trainer-scroll::-webkit-scrollbar { display: none; }
-.chip { flex-shrink: 0; background: var(--sand); border: 1px solid var(--border-strong); color: var(--ink-soft); padding: 6px 13px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Outfit', sans-serif; white-space: nowrap; }
+.chip { flex-shrink: 0; background: var(--sand); border: 1px solid var(--border-strong); color: var(--ink-soft); padding: 10px 13px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 20px; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: var(--transition); font-family: 'Outfit', sans-serif; white-space: nowrap; }
 .chip:hover { background: var(--sand-dark); }
 .chip.active { background: var(--leather-deeper); color: var(--cream); border-color: var(--leather-deeper); }
 .trainer-pages-bar { background: var(--sand-dark); border-bottom: 1px solid var(--border); padding: 7px 12px; display: flex; align-items: center; gap: 8px; overflow-x: auto; -webkit-overflow-scrolling: touch; scrollbar-width: none; }
 .trainer-pages-bar::-webkit-scrollbar { display: none; }
 .trainer-pages-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--ink-muted); white-space: nowrap; }
-.trainer-page-link { flex-shrink: 0; font-size: 0.75rem; font-weight: 600; color: var(--leather-dark); text-decoration: none; background: var(--cream); border: 1px solid var(--border-strong); padding: 4px 11px; border-radius: 14px; transition: var(--transition); white-space: nowrap; }
+.trainer-page-link { flex-shrink: 0; font-size: 0.75rem; font-weight: 600; color: var(--leather-dark); text-decoration: none; background: var(--cream); border: 1px solid var(--border-strong); padding: 8px 11px; min-height: 44px; display: inline-flex; align-items: center; border-radius: 14px; transition: var(--transition); white-space: nowrap; }
 .trainer-page-link:hover { background: var(--leather-deeper); color: var(--cream); border-color: var(--leather-deeper); }
 .main { padding: 14px 12px; max-width: 1400px; margin: 0 auto; }
 .showing-count { font-size: 0.76rem; color: var(--ink-muted); margin-bottom: 8px; font-weight: 500; }
