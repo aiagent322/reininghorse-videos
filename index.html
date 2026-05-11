@@ -31,8 +31,8 @@ body { overflow-x: hidden; font-family: 'Outfit', -apple-system, sans-serif; bac
 .sponsor-bar { background: var(--leather-deeper); padding: 6px 16px; display: flex; justify-content: space-between; align-items: center; font-size: 0.72rem; color: rgba(255,251,245,0.6); font-weight: 500; }
 .sponsor-bar a { color: var(--rope-light); text-decoration: none; font-weight: 700; }
 .sponsor-bar-right { font-weight: 700; color: rgba(255,251,245,0.5); letter-spacing: 1px; font-size: 0.68rem; }
-.bb-logo-link { display:flex; align-items:center; line-height:0; }
-@media(max-width:599px){ .bb-logo-link { display:none; } }
+.bb-logo-link { display:none; align-items:center; line-height:0; }
+@media(min-width:600px){ .bb-logo-link { display:flex; } }
 .site-header { background: var(--leather-deeper); text-align: center; padding: 18px 16px 14px; border-bottom: 3px solid var(--rope); }
 .site-title { font-size: clamp(1.6rem,4vw,2.4rem); font-weight: 900; color: var(--cream); letter-spacing: -0.5px; line-height: 1; }
 .site-title span { color: var(--rope-light); }
@@ -60,21 +60,22 @@ body { overflow-x: hidden; font-family: 'Outfit', -apple-system, sans-serif; bac
 .main { padding: 14px 12px; max-width: 1400px; margin: 0 auto; }
 .showing-count { font-size: 0.76rem; color: var(--ink-muted); margin-bottom: 8px; font-weight: 500; }
 .section-header { font-size: 0.76rem; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 12px; padding-bottom: 8px; border-bottom: 2px solid var(--border); }
-.video-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
-@media (max-width: 1024px) { .video-grid { grid-template-columns: repeat(3,1fr); } }
-@media (max-width: 640px) { .video-grid { grid-template-columns: repeat(2,1fr); gap: 8px; } }
+.video-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+@media (min-width: 1024px) { .video-grid { grid-template-columns: repeat(4,1fr); gap: 12px; } }
+@media (min-width: 480px) { .video-grid { grid-template-columns: repeat(2,1fr); gap: 8px; } }
+@media (min-width: 640px) { .video-grid { grid-template-columns: repeat(3,1fr); gap: 10px; } }
 .video-card { background: var(--cream); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; cursor: pointer; transition: var(--transition); box-shadow: var(--shadow-sm); text-decoration: none; color: inherit; display: block; }
 .video-card:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
 .video-thumb-wrap { position: relative; width: 100%; aspect-ratio: 16/9; background: #111; overflow: hidden; }
 .video-thumb-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .rank-badge { position: absolute; top: 6px; left: 6px; background: var(--leather-deeper); color: var(--rope-light); font-size: 0.7rem; font-weight: 800; padding: 3px 7px; border-radius: 4px; line-height: 1; }
 .year-badge { position: absolute; top: 6px; right: 6px; background: rgba(0,0,0,0.65); color: #fff; font-size: 0.66rem; font-weight: 700; padding: 3px 6px; border-radius: 4px; line-height: 1; }
-.video-body { padding: 9px 10px; }
-.video-title { font-size: 0.83rem; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.video-host { font-size: 0.73rem; color: var(--ink-muted); font-weight: 500; margin-bottom: 5px; }
+.video-body { padding: 7px; }
+.video-title { font-size: 0.76rem; font-weight: 700; color: var(--ink); line-height: 1.3; margin-bottom: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.video-host { font-size: 0.67rem; color: var(--ink-muted); font-weight: 500; margin-bottom: 5px; }
 .video-footer { display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
 .cat-badge { font-size: 0.63rem; font-weight: 700; padding: 2px 7px; border-radius: 10px; background: var(--rope-pale); color: var(--leather-dark); white-space: nowrap; }
-@media (max-width: 640px) { .video-body { padding: 7px; } .video-title { font-size: 0.76rem; } .video-host { font-size: 0.67rem; } }
+@media (min-width: 640px) { .video-body { padding: 9px 10px; } .video-title { font-size: 0.83rem; } .video-host { font-size: 0.73rem; } }
 .no-results { grid-column: 1/-1; text-align: center; padding: 48px 20px; color: var(--ink-muted); font-size: 0.95rem; }
 footer { background: var(--leather-deeper); color: rgba(255,251,245,0.6); text-align: center; padding: 24px 16px; font-size: 0.82rem; margin-top: 32px; }
 footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
