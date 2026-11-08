@@ -1780,13 +1780,21 @@ function renderAll(){
   }
   label.textContent=`TOP ${matching.length} RANKED VIDEOS`;
   count.textContent=matching.length===SHOWS.length?`Showing all ${SHOWS.length} videos`:`Showing ${matching.length} of ${SHOWS.length} videos`;
-  // Split results into four chunks so the three inventory ad zones sit inside the list.
-  // Chunk size is a multiple of 12 so rows stay full at 1, 2, 3 and 4 columns; short lists get no ads.
-  const size=Math.max(24,Math.ceil(matching.length/4/12)*12);
-  grids.forEach((g,k)=>{
-    g.innerHTML=matching.slice(k*size,(k+1)*size).map((s,i)=>videoCardHTML(s,k*size+i+1)).join('');
+  // Place the three inventory ad zones at roughly 25% / 50% / 75% of the results.
+  // Boundaries snap to multiples of 12 so rows stay full at 1, 2, 3 and 4 columns.
+  // A zone is skipped when it would sit within 24 cards of the previous one or within 12 of the end.
+  const n=matching.length, used=[]; let prev=0;
+  [1,2,3].forEach(k=>{
+    const b=Math.round(n*k/4/12)*12;
+    if(b-prev>=24 && n-b>=12){ used.push(b); prev=b; }
   });
-  ads.forEach((a,k)=>{ a.style.display=matching.length>(k+1)*size?'':'none'; });
+  const edges=[0,...used,n];
+  grids.forEach((g,k)=>{
+    g.innerHTML = k<edges.length-1
+      ? matching.slice(edges[k],edges[k+1]).map((s,i)=>videoCardHTML(s,edges[k]+i+1)).join('')
+      : '';
+  });
+  ads.forEach((a,k)=>{ a.style.display = k<used.length ? '' : 'none'; });
 }
 
 renderAll();
