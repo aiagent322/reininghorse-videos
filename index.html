@@ -186,7 +186,20 @@ footer a { color: var(--rope-light); text-decoration: none; font-weight: 600; }
 <main class="main">
   <div class="showing-count" id="showingCount"></div>
   <div class="section-header" id="gridLabel"></div>
+  <!-- Revive Adserver Hosted edition Asynchronous JS Tag - Generated with Revive Adserver v6.0.6; asyncjs.php is already loaded by the header zone above -->
   <div class="video-grid" id="videoGrid"></div>
+  <div class="revive-banner inv-ad" id="invAd1" style="text-align:center;padding:16px 0;display:none;">
+    <ins data-revive-zoneid="31801" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+  </div>
+  <div class="video-grid" id="videoGrid2"></div>
+  <div class="revive-banner inv-ad" id="invAd2" style="text-align:center;padding:16px 0;display:none;">
+    <ins data-revive-zoneid="31802" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+  </div>
+  <div class="video-grid" id="videoGrid3"></div>
+  <div class="revive-banner inv-ad" id="invAd3" style="text-align:center;padding:16px 0;display:none;">
+    <ins data-revive-zoneid="31803" data-revive-id="727bec5e09208690b050ccfc6a45d384"></ins>
+  </div>
+  <div class="video-grid" id="videoGrid4"></div>
 </main>
 
 <!-- Revive Adserver zone 31479 (footer) -->
@@ -1757,13 +1770,23 @@ function renderAll(){
   const count=document.getElementById('showingCount');
   const label=document.getElementById('gridLabel');
   document.getElementById('stat-total').textContent=SHOWS.length;
+  const grids=[grid,document.getElementById('videoGrid2'),document.getElementById('videoGrid3'),document.getElementById('videoGrid4')];
+  const ads=[1,2,3].map(n=>document.getElementById('invAd'+n));
   if(matching.length===0){
     grid.innerHTML='<div class="no-results">No videos found.</div>';
+    grids.slice(1).forEach(g=>g.innerHTML='');
+    ads.forEach(a=>a.style.display='none');
     count.textContent=''; label.textContent=''; return;
   }
   label.textContent=`TOP ${matching.length} RANKED VIDEOS`;
   count.textContent=matching.length===SHOWS.length?`Showing all ${SHOWS.length} videos`:`Showing ${matching.length} of ${SHOWS.length} videos`;
-  grid.innerHTML=matching.map((s,i)=>videoCardHTML(s,i+1)).join('');
+  // Split results into four chunks so the three inventory ad zones sit inside the list.
+  // Chunk size is a multiple of 12 so rows stay full at 1, 2, 3 and 4 columns; short lists get no ads.
+  const size=Math.max(24,Math.ceil(matching.length/4/12)*12);
+  grids.forEach((g,k)=>{
+    g.innerHTML=matching.slice(k*size,(k+1)*size).map((s,i)=>videoCardHTML(s,k*size+i+1)).join('');
+  });
+  ads.forEach((a,k)=>{ a.style.display=matching.length>(k+1)*size?'':'none'; });
 }
 
 renderAll();
